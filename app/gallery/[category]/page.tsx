@@ -1,57 +1,73 @@
+// app/gallery/[category]/page.tsx
 import Link from "next/link";
+import Image from "next/image";
 import images from "@/data/images.json";
-import ScrollerRow from "@/components/ScrollerRow";
+import { notFound } from "next/navigation";
 
-type Img = {
-  category: string;
-  subcategory: string;
-  src: string;
-  alt: string;
-};
+interface PageProps {
+  params: Promise<{ category: string }>;
+}
 
-export default function CategoryPage({ params }: { params: { category: string } }) {
-  const category = params.category;
-  const imgs = (images as Img[]).filter((i) => i.category === category);
+export default async function CategoryPage({ params }: PageProps) {
+  const { category } = await params;
+  
+  // Validate category
+  if (!["photos", "drawings"].includes(category)) {
+    notFound();
+  }
 
-  const subcats = Array.from(new Set(imgs.map((i) => i.subcategory)));
+  // Get all images for this category
+  const categoryImages = images.filter(img => img.category === category);
+  
+  // Get unique subcategories for this category
+  const subcategories = [...new Set(categoryImages.map(img => img.subcategory))];
 
-  const bySub: Record<string, Img[]> = {};
-  subcats.forEach((sc) => {
-    bySub[sc] = imgs.filter((i) => i.subcategory === sc);
-  });
+  // Format subcategory names for display
+  const formatSubcategoryName = (name: string) => {
+    return name.split('_').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join(' ');
+  };
 
   return (
-    <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="flex items-baseline justify-between">
-        <h1 className="text-5xl font-serif capitalize">{category}</h1>
-        <Link href="/" className="text-sm text-gray-500 hover:text-gray-700">
-          Back to Gallery
-        </Link>
+    <div className="min-h-screen bg-white">
+      <div className="pt-20 px-8 space-y-16">
+        {subcategories.map((subcategory) => {
+          const subcategoryImages = categoryImages.filter(img => img.subcategory === subcategory);
+          
+          return (
+            <section key={subcategory}>
+              <h2 className="text-3xl font-serif text-gray-900 mb-8 tracking-wide">
+                {formatSubcategoryName(subcategory)}
+              </h2>
+
+              {/* Horizontal Scrolling Images - Fixed sizing with explicit dimensions */}
+              <div className="flex overflow-x-auto scrollbar-none pb-4">
+                {subcategoryImages.map((image, index) => (
+                  <Link
+                    key={image.src}
+                    href={`/gallery/${category}/${subcategory}`}
+                    className="flex-shrink-0 group"
+                    style={{ marginRight: '32px' }}
+                  >
+                    <div className="relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        width={288}
+                        height={384}
+                        className="object-cover transition-transform duration-300 group-hover:scale-105 w-72 h-96"
+                        sizes="288px"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          );
+        })}
       </div>
-
-      {subcats.map((sc) => (
-        <section key={sc} className="mt-14">
-          <div className="mb-4 flex items-center justify-between">
-            <h2 className="text-[32px] leading-none font-serif capitalize">
-              {sc.replaceAll("_", " ")}
-            </h2>
-            <Link
-              href={`/gallery/${category}/${sc}`}
-              className="text-sm text-gray-500 hover:text-gray-700"
-            >
-              View all
-            </Link>
-          </div>
-
-          <ScrollerRow
-            items={bySub[sc].map((img) => ({
-              src: img.src,
-              alt: img.alt,
-              href: `/gallery/${category}/${sc}`,
-            }))}
-          />
-        </section>
-      ))}
-    </main>
+    </div>
   );
 }

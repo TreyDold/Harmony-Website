@@ -57,7 +57,8 @@ export default function SiteHeader() {
                 alignItems: 'center', 
                 gap: 'clamp(16px, 3vw, 32px)',
                 flexShrink: 0,
-                marginLeft: 'auto'
+                marginLeft: 'auto',
+		paddingRight: 40,
               }}
             >
               <Link
@@ -162,7 +163,8 @@ export default function SiteHeader() {
               alignItems: 'center', 
               gap: 'clamp(16px, 3vw, 32px)',
               flexShrink: 0,
-              marginLeft: 'auto'
+              marginLeft: 'auto',
+	      paddingRight: 40,
             }}
           >
             <Link

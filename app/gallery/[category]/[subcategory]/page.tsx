@@ -67,7 +67,7 @@ export default async function SubcategoryPage({ params }: PageProps) {
         </div>
 
         {/* Images Grid - Now using optimized images */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-[80%] mx-auto">
           {subcategoryImages.map((image, index) => {
             // Vary the aspect ratios for visual interest
             const aspectRatios = [

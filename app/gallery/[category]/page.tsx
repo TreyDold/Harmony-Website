@@ -1,12 +1,21 @@
 // app/gallery/[category]/page.tsx
 import Link from "next/link";
-import Image from "next/image";
+import ResponsiveImage from "@/components/ResponsiveImage";
 import images from "@/data/images.json";
 import { notFound } from "next/navigation";
 
 interface PageProps {
   params: Promise<{ category: string }>;
 }
+
+// Helper function to convert old paths to optimized paths
+const getOptimizedImagePath = (oldSrc: string) => {
+  // Convert "/gallery/photos/abstracts/Front_backsides.jpg" 
+  // to "photos/abstracts/Front_backsides"
+  return oldSrc
+    .replace('/gallery/', '') // Remove /gallery/ prefix
+    .replace(/\.(jpg|jpeg|png|webp)$/i, ''); // Remove file extension
+};
 
 export default async function CategoryPage({ params }: PageProps) {
   const { category } = await params;
@@ -41,7 +50,7 @@ export default async function CategoryPage({ params }: PageProps) {
                 {formatSubcategoryName(subcategory)}
               </h2>
 
-              {/* Horizontal Scrolling Images - Fixed sizing with explicit dimensions */}
+              {/* Horizontal Scrolling Images - Now using optimized images */}
               <div className="flex overflow-x-auto scrollbar-none pb-4">
                 {subcategoryImages.map((image, index) => (
                   <Link
@@ -50,14 +59,11 @@ export default async function CategoryPage({ params }: PageProps) {
                     className="flex-shrink-0 group"
                     style={{ marginRight: '32px' }}
                   >
-                    <div className="relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-                      <Image
-                        src={image.src}
+                    <div className="relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 w-72 h-96" style={{ position: 'relative' }}>
+                      <ResponsiveImage
+                        src={getOptimizedImagePath(image.src)}
                         alt={image.alt}
-                        width={288}
-                        height={384}
-                        className="object-cover transition-transform duration-300 group-hover:scale-105 w-72 h-96"
-                        sizes="288px"
+                        className="object-cover transition-transform duration-300 group-hover:scale-105 w-full h-full"
                       />
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
                     </div>

@@ -6,6 +6,17 @@ import images from "@/data/images.json";
 
 type Img = { src: string; alt: string; category: string; subcategory: string };
 
+// Helper function to convert old paths to optimized paths
+const getOptimizedImagePath = (oldSrc: string) => {
+  // Convert "/gallery/photos/abstracts/Front_backsides.jpg" 
+  // to "/images/optimized/large/photos/abstracts/Front_backsides.webp"
+  const cleanPath = oldSrc
+    .replace('/gallery/', '') // Remove /gallery/ prefix
+    .replace(/\.(jpg|jpeg|png|webp)$/i, ''); // Remove file extension
+  
+  return `/images/optimized/large/${cleanPath}.webp`;
+};
+
 export default function RotatingHero({
   intervalMs = 8000,
   pick = 8,
@@ -42,7 +53,7 @@ export default function RotatingHero({
         return (
           <Image
             key={it.src}
-            src={it.src}
+            src={getOptimizedImagePath(it.src)}
             alt={it.alt}
             fill
             priority={i === 0}

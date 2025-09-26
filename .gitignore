@@ -9,6 +9,20 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+.env
+.env.local
+
+# Build files
+.next/
+out/
+build/
+
+# Don't deploy large original images to save bandwidth
+public/images/original/
+
+# OS files
+.DS_Store
+Thumbs.db
 
 # testing
 /coverage

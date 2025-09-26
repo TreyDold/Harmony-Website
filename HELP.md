@@ -1,4 +1,4 @@
 # Harmony Baker - Files Needing Assistance
 
 ## High Priority
-- [ ] `components/SiteHeader.tsx` - Header links are not in frame and drift off the backgrond image, having trouble with centering them on the page for the viewer. This continues onto other pages like app/gallery/photos and app/gallery/drawings
+- [ ] `components/ResponsiveImage.tsx` - Have run an optimizer script on the images but now going to the drawings or photos pages, the images are scaled wrong and are displayed too large on the screen. Tried to not manually change their size with fill = {true} but this causes the images not to render at all on screen. 

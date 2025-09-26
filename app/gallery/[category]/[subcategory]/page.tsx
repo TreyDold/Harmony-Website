@@ -1,6 +1,6 @@
 // app/gallery/[category]/[subcategory]/page.tsx
 import Link from "next/link";
-import Image from "next/image";
+import ResponsiveImage from "@/components/ResponsiveImage";
 import images from "@/data/images.json";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
@@ -8,6 +8,15 @@ import { ArrowLeft } from "lucide-react";
 interface PageProps {
   params: Promise<{ category: string; subcategory: string }>;
 }
+
+// Helper function to convert old paths to optimized paths
+const getOptimizedImagePath = (oldSrc: string) => {
+  // Convert "/gallery/photos/abstracts/Front_backsides.jpg" 
+  // to "photos/abstracts/Front_backsides"
+  return oldSrc
+    .replace('/gallery/', '') // Remove /gallery/ prefix
+    .replace(/\.(jpg|jpeg|png|webp)$/i, ''); // Remove file extension
+};
 
 export default async function SubcategoryPage({ params }: PageProps) {
   const { category, subcategory } = await params;
@@ -57,7 +66,7 @@ export default async function SubcategoryPage({ params }: PageProps) {
           </p>
         </div>
 
-        {/* Images Grid - James Jean style */}
+        {/* Images Grid - Now using optimized images */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {subcategoryImages.map((image, index) => {
             // Vary the aspect ratios for visual interest
@@ -74,12 +83,11 @@ export default async function SubcategoryPage({ params }: PageProps) {
                 key={image.src}
                 className={`group ${aspectRatio} relative overflow-hidden rounded-lg bg-gray-100`}
               >
-                <Image
-                  src={image.src}
+                <ResponsiveImage
+                  src={getOptimizedImagePath(image.src)}
                   alt={image.alt}
-                  fill
-                  className="object-cover transition-all duration-500 group-hover:scale-105"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-all duration-500 group-hover:scale-105 w-full h-full"
+                  priority={index < 6} // Load first 6 images with priority
                 />
                 
                 {/* Hover overlay */}

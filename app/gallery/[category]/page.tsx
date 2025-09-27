@@ -1,4 +1,4 @@
-// app/gallery/[category]/page.tsx
+// app/gallery/[category]/page.tsx - PRODUCTION VERSION
 import Link from "next/link";
 import ResponsiveImage from "@/components/ResponsiveImage";
 import images from "@/data/images.json";
@@ -40,7 +40,7 @@ export default async function CategoryPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="pt-20 px-8 space-y-16">
+      <div className="px-8 space-y-16" style={{ paddingTop: '70px' }}> {/* FIXED: 160px top padding */}
         {subcategories.map((subcategory) => {
           const subcategoryImages = categoryImages.filter(img => img.subcategory === subcategory);
           
@@ -51,7 +51,7 @@ export default async function CategoryPage({ params }: PageProps) {
               </h2>
 
               {/* Horizontal Scrolling Images - Now using optimized images */}
-              <div className="flex overflow-x-auto scrollbar-none pb-4 max-w-[80%] mx-auto">
+              <div className="flex overflow-x-auto scrollbar-none pb-4 max-w-[95%] mx-auto">
                 {subcategoryImages.map((image, index) => (
                   <Link
                     key={image.src}
@@ -59,7 +59,7 @@ export default async function CategoryPage({ params }: PageProps) {
                     className="flex-shrink-0 group"
                     style={{ marginRight: '32px' }}
                   >
-                    <div className="relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 w-72 h-96" style={{ position: 'relative' }}>
+                    <div className="relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 w-72 h-96">
                       <ResponsiveImage
                         src={getOptimizedImagePath(image.src)}
                         alt={image.alt}

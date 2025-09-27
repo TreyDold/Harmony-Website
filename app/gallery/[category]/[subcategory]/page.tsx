@@ -44,7 +44,7 @@ export default async function SubcategoryPage({ params }: PageProps) {
   };
 
   return (
-    <div className="min-h-screen pt-24 pb-16">
+    <div className="min-h-screen pt-48 pb-16"> {/* Changed from pt-24 to pt-32 */}
       <div className="max-w-6xl mx-auto px-8">
         {/* Back Navigation */}
         <Link

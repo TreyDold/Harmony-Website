@@ -9,7 +9,7 @@ export default function ContactPage() {
         
         <div className="prose prose-lg text-gray-600">
           <p className="text-xl leading-relaxed mb-8">
-            Thank you for your interest in my work. I'm always excited to connect 
+            Thank you for your interest in my work. I&apos;m always excited to connect 
             with fellow artists, collectors, and anyone passionate about visual storytelling.
           </p>
           

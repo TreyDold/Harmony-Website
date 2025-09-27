@@ -51,7 +51,7 @@ export default async function CategoryPage({ params }: PageProps) {
               </h2>
 
               {/* Horizontal Scrolling Images - Now using optimized images */}
-              <div className="flex overflow-x-auto scrollbar-none pb-4">
+              <div className="flex overflow-x-auto scrollbar-none pb-4 max-w-[80%] mx-auto">
                 {subcategoryImages.map((image, index) => (
                   <Link
                     key={image.src}

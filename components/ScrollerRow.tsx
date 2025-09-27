@@ -9,7 +9,7 @@ export default function ScrollerRow({
   items: { src: string; alt: string; href: string }[];
 }) {
   return (
-    <div className="flex gap-6 overflow-x-auto scrollbar-none pb-4">
+    <div className="flex gap-6 overflow-x-auto scrollbar-none pb-4 max-w-[80%] mx-auto">
       {items.map((item) => (
         <Link
           key={item.src}

@@ -26,7 +26,7 @@ export default function RotatingHero({
 }) {
   // Choose a curated set on first render (stable order)
   const pool = useMemo(() => {
-    let allowed = images as Img[];
+    const allowed = images as Img[]; // Changed from 'let' to 'const'
     
     // Lightweight deterministic shuffle
     const arr = [...allowed];
@@ -38,7 +38,7 @@ export default function RotatingHero({
   }, [pick]);
 
   const [idx, setIdx] = useState(0);
-  const [isLoaded, setIsLoaded] = useState(false);
+  // Removed unused 'isLoaded' variable
 
   useEffect(() => {
     if (pool.length < 2) return;
@@ -61,7 +61,6 @@ export default function RotatingHero({
               showing ? "opacity-100 scale-100" : "opacity-0 scale-105"
             }`}
             sizes="100vw"
-            onLoad={() => i === 0 && setIsLoaded(true)}
           />
         );
       })}

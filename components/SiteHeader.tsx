@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 export default function SiteHeader() {
   const pathname = usePathname();
 
-  // Home page: Minimal overlay navigation like James Jean
+  // Home page: Minimal overlay navigation with enhanced drop shadows
   if (pathname === "/") {
     return (
       <header 
@@ -50,7 +50,7 @@ export default function SiteHeader() {
               HARMONY BAKER
             </Link>
 
-            {/* Simple navigation - Right side with responsive spacing */}
+            {/* Simple navigation - Right side with enhanced styling */}
             <nav 
               style={{ 
                 display: 'flex', 
@@ -65,13 +65,14 @@ export default function SiteHeader() {
                 href="/gallery/drawings"
                 style={{
                   fontSize: 'clamp(0.7rem, 1.5vw, 0.875rem)',
-                  fontWeight: 300,
+                  fontWeight: 500,
                   letterSpacing: '0.1em',
                   textTransform: 'uppercase',
-                  color: 'rgba(255,255,255,0.9)',
-                  textShadow: '0 2px 8px rgba(0,0,0,0.9)',
+                  color: 'white',
+                  textShadow: '0 3px 10px rgba(0,0,0,0.95), 0 1px 3px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.6)',
                   textDecoration: 'none',
-                  whiteSpace: 'nowrap'
+                  whiteSpace: 'nowrap',
+                  padding: '6px 12px'
                 }}
               >
                 DRAWINGS
@@ -80,13 +81,14 @@ export default function SiteHeader() {
                 href="/gallery/photos"
                 style={{
                   fontSize: 'clamp(0.7rem, 1.5vw, 0.875rem)',
-                  fontWeight: 300,
+                  fontWeight: 500,
                   letterSpacing: '0.1em',
                   textTransform: 'uppercase',
-                  color: 'rgba(255,255,255,0.9)',
-                  textShadow: '0 2px 8px rgba(0,0,0,0.9)',
+                  color: 'white',
+                  textShadow: '0 3px 10px rgba(0,0,0,0.95), 0 1px 3px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.6)',
                   textDecoration: 'none',
-                  whiteSpace: 'nowrap'
+                  whiteSpace: 'nowrap',
+                  padding: '6px 12px'
                 }}
               >
                 PHOTOS
@@ -95,13 +97,14 @@ export default function SiteHeader() {
                 href="/contact"
                 style={{
                   fontSize: 'clamp(0.7rem, 1.5vw, 0.875rem)',
-                  fontWeight: 300,
+                  fontWeight: 500,
                   letterSpacing: '0.1em',
                   textTransform: 'uppercase',
-                  color: 'rgba(255,255,255,0.9)',
-                  textShadow: '0 2px 8px rgba(0,0,0,0.9)',
+                  color: 'white',
+                  textShadow: '0 3px 10px rgba(0,0,0,0.95), 0 1px 3px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.6)',
                   textDecoration: 'none',
-                  whiteSpace: 'nowrap'
+                  whiteSpace: 'nowrap',
+                  padding: '6px 12px'
                 }}
               >
                 CONTACT

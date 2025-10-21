@@ -1,18 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import images from "@/data/images.json";
 
 type Img = { src: string; alt: string; category: string; subcategory: string };
 
 // Helper function to convert old paths to optimized paths
 const getOptimizedImagePath = (oldSrc: string) => {
-  // Convert "/gallery/photos/abstracts/Front_backsides.jpg" 
-  // to "/images/optimized/large/photos/abstracts/Front_backsides.webp"
   const cleanPath = oldSrc
-    .replace('/gallery/', '') // Remove /gallery/ prefix
-    .replace(/\.(jpg|jpeg|png|webp)$/i, ''); // Remove file extension
+    .replace('/gallery/', '')
+    .replace(/\.(jpg|jpeg|png|webp)$/i, '');
   
   return `/images/optimized/large/${cleanPath}.webp`;
 };
@@ -26,7 +25,7 @@ export default function RotatingHero({
 }) {
   // Choose a curated set on first render (stable order)
   const pool = useMemo(() => {
-    const allowed = images as Img[]; // Changed from 'let' to 'const'
+    const allowed = images as Img[];
     
     // Lightweight deterministic shuffle
     const arr = [...allowed];
@@ -38,7 +37,9 @@ export default function RotatingHero({
   }, [pick]);
 
   const [idx, setIdx] = useState(0);
-  // Removed unused 'isLoaded' variable
+  const [mouseX, setMouseX] = useState<number | null>(null);
+  const [containerWidth, setContainerWidth] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (pool.length < 2) return;
@@ -46,8 +47,71 @@ export default function RotatingHero({
     return () => clearInterval(t);
   }, [pool.length, intervalMs]);
 
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) {
+      console.log('No container');
+      return;
+    }
+
+    // Set initial width with a small delay to ensure DOM is ready
+    const updateWidth = () => {
+      const width = container.clientWidth || container.offsetWidth || window.innerWidth;
+      console.log('Trying to set width:', {
+        clientWidth: container.clientWidth,
+        offsetWidth: container.offsetWidth,
+        windowInnerWidth: window.innerWidth,
+        finalWidth: width
+      });
+      setContainerWidth(width);
+    };
+
+    // Try immediately
+    updateWidth();
+    
+    // And try again after a short delay
+    const timeoutId = setTimeout(updateWidth, 100);
+
+    const handleMouseMove = (e: MouseEvent) => {
+      setMouseX(e.clientX);
+    };
+
+    const handleMouseLeave = () => {
+      setMouseX(null);
+    };
+
+    const handleResize = () => {
+      updateWidth();
+    };
+
+    container.addEventListener('mousemove', handleMouseMove);
+    container.addEventListener('mouseleave', handleMouseLeave);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      clearTimeout(timeoutId);
+      container.removeEventListener('mousemove', handleMouseMove);
+      container.removeEventListener('mouseleave', handleMouseLeave);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const goToPrevious = () => {
+    setIdx((i) => (i - 1 + pool.length) % pool.length);
+  };
+
+  const goToNext = () => {
+    setIdx((i) => (i + 1) % pool.length);
+  };
+
+  // Determine which side of the screen the cursor is on
+  const isLeftSide = mouseX !== null && containerWidth > 0 && mouseX < containerWidth / 2;
+  const isRightSide = mouseX !== null && containerWidth > 0 && mouseX >= containerWidth / 2;
+
+  console.log('Render:', { mouseX, containerWidth, isLeftSide, isRightSide });
+
   return (
-    <div className="relative h-screen w-full overflow-hidden bg-black">
+    <div ref={containerRef} className="relative h-screen w-full overflow-hidden bg-black">
       {pool.map((it, i) => {
         const showing = i === idx;
         return (
@@ -65,9 +129,36 @@ export default function RotatingHero({
         );
       })}
       
-      {/* Subtle vignette effect like James Jean's site */}
+      {/* Subtle vignette effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30" />
       <div className="absolute inset-0 bg-gradient-to-r from-black/5 via-transparent to-black/5" />
+
+      {/* Navigation arrows - appear based on cursor position */}
+      {pool.length > 1 && (
+        <>
+          {/* Left arrow - shows when cursor is on left half */}
+          <button
+            onClick={goToPrevious}
+            className={`absolute left-8 top-1/2 -translate-y-1/2 z-10 bg-black/70 hover:bg-black/90 text-white p-4 rounded-full transition-all duration-300 ${
+              isLeftSide ? 'opacity-100' : 'opacity-0 pointer-events-none'
+            }`}
+            aria-label="Previous image"
+          >
+            <ChevronLeft className="w-8 h-8" />
+          </button>
+
+          {/* Right arrow - shows when cursor is on right half */}
+          <button
+            onClick={goToNext}
+            className={`absolute right-8 top-1/2 -translate-y-1/2 z-10 bg-black/70 hover:bg-black/90 text-white p-4 rounded-full transition-all duration-300 ${
+              isRightSide ? 'opacity-100' : 'opacity-0 pointer-events-none'
+            }`}
+            aria-label="Next image"
+          >
+            <ChevronRight className="w-8 h-8" />
+          </button>
+        </>
+      )}
     </div>
   );
 }

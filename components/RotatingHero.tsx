@@ -125,6 +125,7 @@ export default function RotatingHero({
               showing ? "opacity-100 scale-100" : "opacity-0 scale-105"
             }`}
             sizes="100vw"
+            
           />
         );
       })}
@@ -134,13 +135,12 @@ export default function RotatingHero({
       <div className="absolute inset-0 bg-gradient-to-r from-black/5 via-transparent to-black/5" />
 
       {/* Navigation arrows - appear based on cursor position */}
-      {pool.length > 1 && (
         <>
           {/* Left arrow - shows when cursor is on left half */}
           <button
             onClick={goToPrevious}
-            className={`absolute left-8 top-1/2 -translate-y-1/2 z-10 bg-black/70 hover:bg-black/90 text-white p-4 rounded-full transition-all duration-300 ${
-              isLeftSide ? 'opacity-100' : 'opacity-0 pointer-events-none'
+            className={`absolute left-8 top-1/2 -translate-y-1/2 z-50 bg-black/70 hover:bg-black/90 text-white p-4 rounded-full transition-all duration-300 ${
+              isLeftSide ? 'opacity-100' : 'opacity-50'
             }`}
             aria-label="Previous image"
           >
@@ -150,15 +150,14 @@ export default function RotatingHero({
           {/* Right arrow - shows when cursor is on right half */}
           <button
             onClick={goToNext}
-            className={`absolute right-8 top-1/2 -translate-y-1/2 z-10 bg-black/70 hover:bg-black/90 text-white p-4 rounded-full transition-all duration-300 ${
-              isRightSide ? 'opacity-100' : 'opacity-0 pointer-events-none'
+            className={`absolute right-8 top-1/2 -translate-y-1/2 z-50 bg-black/70 hover:bg-black/90 text-white p-4 rounded-full transition-all duration-300 ${
+              isRightSide ? 'opacity-100' : 'opacity-50'
             }`}
             aria-label="Next image"
           >
             <ChevronRight className="w-8 h-8" />
           </button>
         </>
-      )}
     </div>
   );
 }

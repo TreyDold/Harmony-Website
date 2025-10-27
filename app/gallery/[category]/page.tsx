@@ -8,12 +8,15 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 import { use } from "react";
 
-const images = imagesData as Array<{
+// Define the image type
+type ImageType = {
   category: string;
   subcategory: string;
   src: string;
   alt: string;
-}>;
+};
+
+const images = imagesData as ImageType[];
 
 interface PageProps {
   params: Promise<{ category: string }>;
@@ -71,7 +74,7 @@ function SubcategorySection({
 }: { 
   category: string;
   subcategory: string;
-  images: any[];
+  images: ImageType[];  // Changed from any[] to ImageType[]
   formatSubcategoryName: (name: string) => string;
 }) {
   const scrollRef = useRef<HTMLDivElement>(null);

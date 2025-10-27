@@ -1,8 +1,8 @@
 // app/contact/page.tsx
 export default function ContactPage() {
   return (
-    <div className="py-16">
-      <div className="max-w-2xl">
+    <div className="min-h-screen pt-32 pb-16 px-8">
+      <div className="max-w-2xl mx-auto">
         <h1 className="text-4xl sm:text-5xl font-serif text-gray-900 mb-8">
           Contact
         </h1>
@@ -20,7 +20,7 @@ export default function ContactPage() {
               </h3>
               <p>
                 <a 
-                  href="mailto:harmony@example.com" 
+                  href="mailto:curlyharmony@gmail.com" 
                   className="text-amber-600 hover:text-amber-700 transition-colors"
                 >
                   curlyharmony@gmail.com 

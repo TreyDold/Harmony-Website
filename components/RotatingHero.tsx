@@ -38,7 +38,7 @@ export default function RotatingHero({
 
   const [idx, setIdx] = useState(0);
   const [mouseX, setMouseX] = useState<number | null>(null);
-  const [containerWidth, setContainerWidth] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -48,29 +48,12 @@ export default function RotatingHero({
   }, [pool.length, intervalMs]);
 
   useEffect(() => {
-    const container = containerRef.current;
-    if (!container) {
-      console.log('No container');
-      return;
-    }
-
-    // Set initial width with a small delay to ensure DOM is ready
+    // Set initial window width
     const updateWidth = () => {
-      const width = container.clientWidth || container.offsetWidth || window.innerWidth;
-      console.log('Trying to set width:', {
-        clientWidth: container.clientWidth,
-        offsetWidth: container.offsetWidth,
-        windowInnerWidth: window.innerWidth,
-        finalWidth: width
-      });
-      setContainerWidth(width);
+      setWindowWidth(window.innerWidth);
     };
 
-    // Try immediately
     updateWidth();
-    
-    // And try again after a short delay
-    const timeoutId = setTimeout(updateWidth, 100);
 
     const handleMouseMove = (e: MouseEvent) => {
       setMouseX(e.clientX);
@@ -84,14 +67,14 @@ export default function RotatingHero({
       updateWidth();
     };
 
-    container.addEventListener('mousemove', handleMouseMove);
-    container.addEventListener('mouseleave', handleMouseLeave);
+    // Listen to window, not container
+    window.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseleave', handleMouseLeave);
     window.addEventListener('resize', handleResize);
 
     return () => {
-      clearTimeout(timeoutId);
-      container.removeEventListener('mousemove', handleMouseMove);
-      container.removeEventListener('mouseleave', handleMouseLeave);
+      window.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseleave', handleMouseLeave);
       window.removeEventListener('resize', handleResize);
     };
   }, []);
@@ -105,10 +88,8 @@ export default function RotatingHero({
   };
 
   // Determine which side of the screen the cursor is on
-  const isLeftSide = mouseX !== null && containerWidth > 0 && mouseX < containerWidth / 2;
-  const isRightSide = mouseX !== null && containerWidth > 0 && mouseX >= containerWidth / 2;
-
-  console.log('Render:', { mouseX, containerWidth, isLeftSide, isRightSide });
+  const isLeftSide = mouseX !== null && windowWidth > 0 && mouseX < windowWidth / 2;
+  const isRightSide = mouseX !== null && windowWidth > 0 && mouseX >= windowWidth / 2;
 
   return (
     <div ref={containerRef} className="relative h-screen w-full overflow-hidden bg-black">
@@ -121,11 +102,10 @@ export default function RotatingHero({
             alt={it.alt}
             fill
             priority={i === 0}
-            className={`object-cover transition-all duration-1000 ease-in-out will-change-opacity ${
+            className={`object-cover transition-all duration-[2000ms] ease-in-out will-change-opacity ${
               showing ? "opacity-100 scale-100" : "opacity-0 scale-105"
             }`}
             sizes="100vw"
-            
           />
         );
       })}
@@ -135,12 +115,13 @@ export default function RotatingHero({
       <div className="absolute inset-0 bg-gradient-to-r from-black/5 via-transparent to-black/5" />
 
       {/* Navigation arrows - appear based on cursor position */}
+      {pool.length > 1 && (
         <>
           {/* Left arrow - shows when cursor is on left half */}
           <button
             onClick={goToPrevious}
             className={`absolute left-8 top-1/2 -translate-y-1/2 z-50 bg-black/70 hover:bg-black/90 text-white p-4 rounded-full transition-all duration-300 ${
-              isLeftSide ? 'opacity-100' : 'opacity-50'
+              isLeftSide ? 'opacity-100' : 'opacity-0'
             }`}
             aria-label="Previous image"
           >
@@ -151,13 +132,14 @@ export default function RotatingHero({
           <button
             onClick={goToNext}
             className={`absolute right-8 top-1/2 -translate-y-1/2 z-50 bg-black/70 hover:bg-black/90 text-white p-4 rounded-full transition-all duration-300 ${
-              isRightSide ? 'opacity-100' : 'opacity-50'
+              isRightSide ? 'opacity-100' : 'opacity-0'
             }`}
             aria-label="Next image"
           >
             <ChevronRight className="w-8 h-8" />
           </button>
         </>
+      )}
     </div>
   );
 }

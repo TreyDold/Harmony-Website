@@ -1,8 +1,19 @@
-// app/gallery/[category]/page.tsx - PRODUCTION VERSION
+"use client";
+
 import Link from "next/link";
 import ResponsiveImage from "@/components/ResponsiveImage";
-import images from "@/data/images.json";
+import imagesData from "@/data/images.json";
 import { notFound } from "next/navigation";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useRef, useState, useEffect } from "react";
+import { use } from "react";
+
+const images = imagesData as Array<{
+  category: string;
+  subcategory: string;
+  src: string;
+  alt: string;
+}>;
 
 interface PageProps {
   params: Promise<{ category: string }>;
@@ -10,28 +21,21 @@ interface PageProps {
 
 // Helper function to convert old paths to optimized paths
 const getOptimizedImagePath = (oldSrc: string) => {
-  // Convert "/gallery/photos/abstracts/Front_backsides.jpg" 
-  // to "photos/abstracts/Front_backsides"
   return oldSrc
-    .replace('/gallery/', '') // Remove /gallery/ prefix
-    .replace(/\.(jpg|jpeg|png|webp)$/i, ''); // Remove file extension
+    .replace('/gallery/', '')
+    .replace(/\.(jpg|jpeg|png|webp)$/i, '');
 };
 
-export default async function CategoryPage({ params }: PageProps) {
-  const { category } = await params;
+export default function CategoryPage({ params }: PageProps) {
+  const { category } = use(params);
   
-  // Validate category
   if (!["photos", "drawings"].includes(category)) {
     notFound();
   }
 
-  // Get all images for this category
   const categoryImages = images.filter(img => img.category === category);
-  
-  // Get unique subcategories for this category
   const subcategories = [...new Set(categoryImages.map(img => img.subcategory))];
 
-  // Format subcategory names for display
   const formatSubcategoryName = (name: string) => {
     return name.split('_').map(word => 
       word.charAt(0).toUpperCase() + word.slice(1)
@@ -40,40 +44,207 @@ export default async function CategoryPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="px-8 space-y-16" style={{ paddingTop: '70px' }}> {/* FIXED: 160px top padding */}
+      <div className="px-8 space-y-20" style={{ paddingTop: '140px', paddingBottom: '60px' }}>
         {subcategories.map((subcategory) => {
           const subcategoryImages = categoryImages.filter(img => img.subcategory === subcategory);
           
           return (
-            <section key={subcategory}>
-              <h2 className="text-3xl font-serif text-gray-900 mb-8 tracking-wide">
-                {formatSubcategoryName(subcategory)}
-              </h2>
-
-              {/* Horizontal Scrolling Images - Now using optimized images */}
-              <div className="flex overflow-x-auto scrollbar-none pb-4 max-w-[95%] mx-auto">
-                {subcategoryImages.map((image) => (
-                  <Link
-                    key={image.src}
-                    href={`/gallery/${category}/${subcategory}`}
-                    className="flex-shrink-0 group"
-                    style={{ marginRight: '32px' }}
-                  >
-                    <div className="relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 w-72 h-96">
-                      <ResponsiveImage
-                        src={getOptimizedImagePath(image.src)}
-                        alt={image.alt}
-                        className="object-cover transition-transform duration-300 group-hover:scale-105 w-full h-full"
-                      />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </section>
+            <SubcategorySection 
+              key={subcategory}
+              category={category}
+              subcategory={subcategory}
+              images={subcategoryImages}
+              formatSubcategoryName={formatSubcategoryName}
+            />
           );
         })}
       </div>
     </div>
+  );
+}
+
+function SubcategorySection({ 
+  category, 
+  subcategory, 
+  images, 
+  formatSubcategoryName 
+}: { 
+  category: string;
+  subcategory: string;
+  images: any[];
+  formatSubcategoryName: (name: string) => string;
+}) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [mouseX, setMouseX] = useState<number | null>(null);
+  const [containerBounds, setContainerBounds] = useState({ left: 0, right: 0, width: 0 });
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const [showScrollbar, setShowScrollbar] = useState(false);
+
+  useEffect(() => {
+    const updateBounds = () => {
+      if (scrollRef.current) {
+        const rect = scrollRef.current.getBoundingClientRect();
+        setContainerBounds({
+          left: rect.left,
+          right: rect.right,
+          width: rect.width
+        });
+        
+        // Check if content is scrollable
+        const isScrollable = scrollRef.current.scrollWidth > scrollRef.current.clientWidth;
+        setShowScrollbar(isScrollable);
+      }
+    };
+
+    const handleScroll = () => {
+      if (scrollRef.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+        const maxScroll = scrollWidth - clientWidth;
+        const progress = maxScroll > 0 ? scrollLeft / maxScroll : 0;
+        setScrollProgress(progress);
+      }
+    };
+
+    updateBounds();
+
+    const handleMouseMove = (e: MouseEvent) => {
+      if (scrollRef.current) {
+        const rect = scrollRef.current.getBoundingClientRect();
+        if (e.clientY >= rect.top && e.clientY <= rect.bottom) {
+          setMouseX(e.clientX);
+        } else {
+          setMouseX(null);
+        }
+      }
+    };
+
+    const handleResize = () => {
+      updateBounds();
+    };
+
+    const scrollContainer = scrollRef.current;
+    
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('resize', handleResize);
+    if (scrollContainer) {
+      scrollContainer.addEventListener('scroll', handleScroll);
+    }
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('resize', handleResize);
+      if (scrollContainer) {
+        scrollContainer.removeEventListener('scroll', handleScroll);
+      }
+    };
+  }, []);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = 400;
+      scrollRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const isInContainer = mouseX !== null;
+  const containerMidpoint = containerBounds.left + (containerBounds.width / 2);
+  const isLeftSide = isInContainer && mouseX < containerMidpoint;
+  const isRightSide = isInContainer && mouseX >= containerMidpoint;
+
+  // Calculate number of dots based on number of images
+  const numDots = Math.min(images.length, 15); // Max 15 dots
+  const activeDotIndex = Math.round(scrollProgress * (numDots - 1));
+
+  return (
+    <section>
+      {/* Clickable category title */}
+      <Link 
+        href={`/gallery/${category}/${subcategory}`}
+        className="inline-block mb-10 group"
+      >
+        <h2 className="text-5xl font-serif text-gray-900 tracking-wide transition-colors duration-300 group-hover:text-gray-600">
+          {formatSubcategoryName(subcategory)}
+        </h2>
+      </Link>
+
+      {/* Container with arrows */}
+      <div className="relative">
+        {/* Left arrow */}
+        <button
+          onClick={() => scroll('left')}
+          className={`absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/70 hover:bg-black/90 text-white p-3 rounded-full transition-opacity duration-300 ${
+            isLeftSide ? 'opacity-100' : 'opacity-0'
+          }`}
+          aria-label="Scroll left"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+
+        {/* Right arrow */}
+        <button
+          onClick={() => scroll('right')}
+          className={`absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/70 hover:bg-black/90 text-white p-3 rounded-full transition-opacity duration-300 ${
+            isRightSide ? 'opacity-100' : 'opacity-0'
+          }`}
+          aria-label="Scroll right"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
+
+        {/* Horizontal scrolling images */}
+        <div 
+          ref={scrollRef}
+          className="flex overflow-x-auto scrollbar-none pb-6 gap-6"
+        >
+          {images.map((image) => (
+            <Link
+              key={image.src}
+              href={`/gallery/${category}/${subcategory}`}
+              className="flex-shrink-0 group"
+            >
+              <div className="relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 w-64 h-80">
+                <ResponsiveImage
+                  src={getOptimizedImagePath(image.src)}
+                  alt={image.alt}
+                  className="object-cover transition-transform duration-500 group-hover:scale-105 w-full h-full"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300" />
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Custom scrollbar indicator */}
+        {showScrollbar && (
+          <div className="flex justify-center items-center gap-2 mt-4">
+            {Array.from({ length: numDots }).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  if (scrollRef.current) {
+                    const { scrollWidth, clientWidth } = scrollRef.current;
+                    const maxScroll = scrollWidth - clientWidth;
+                    const targetScroll = (index / (numDots - 1)) * maxScroll;
+                    scrollRef.current.scrollTo({
+                      left: targetScroll,
+                      behavior: 'smooth'
+                    });
+                  }
+                }}
+                className={`transition-all duration-300 rounded-full ${
+                  index === activeDotIndex
+                    ? 'w-4 h-4 bg-teal-400'
+                    : 'w-3 h-3 bg-gray-400 hover:bg-gray-500'
+                }`}
+                aria-label={`Scroll to position ${index + 1}`}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
   );
 }

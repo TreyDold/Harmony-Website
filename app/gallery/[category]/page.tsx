@@ -74,7 +74,7 @@ function SubcategorySection({
 }: { 
   category: string;
   subcategory: string;
-  images: ImageType[];  // Changed from any[] to ImageType[]
+  images: ImageType[];
   formatSubcategoryName: (name: string) => string;
 }) {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -82,6 +82,7 @@ function SubcategorySection({
   const [containerBounds, setContainerBounds] = useState({ left: 0, right: 0, width: 0 });
   const [scrollProgress, setScrollProgress] = useState(0);
   const [showScrollbar, setShowScrollbar] = useState(false);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   useEffect(() => {
     const updateBounds = () => {
@@ -178,7 +179,7 @@ function SubcategorySection({
         {/* Left arrow */}
         <button
           onClick={() => scroll('left')}
-          className={`absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/70 hover:bg-black/90 text-white p-3 rounded-full transition-opacity duration-300 ${
+          className={`absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/70 hover:bg-black/90 text-white p-3 rounded-full transition-opacity duration-300 cursor-pointer ${
             isLeftSide ? 'opacity-100' : 'opacity-0'
           }`}
           aria-label="Scroll left"
@@ -189,7 +190,7 @@ function SubcategorySection({
         {/* Right arrow */}
         <button
           onClick={() => scroll('right')}
-          className={`absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/70 hover:bg-black/90 text-white p-3 rounded-full transition-opacity duration-300 ${
+          className={`absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/70 hover:bg-black/90 text-white p-3 rounded-full transition-opacity duration-300 cursor-pointer ${
             isRightSide ? 'opacity-100' : 'opacity-0'
           }`}
           aria-label="Scroll right"
@@ -202,19 +203,27 @@ function SubcategorySection({
           ref={scrollRef}
           className="flex overflow-x-auto scrollbar-none pb-6 gap-6"
         >
-          {images.map((image) => (
+          {images.map((image, index) => (
             <Link
               key={image.src}
-              href={`/gallery/${category}/${subcategory}`}
-              className="flex-shrink-0 group"
+              href={`/gallery/${category}/${subcategory}/${index}`}
+              className="flex-shrink-0 cursor-pointer"
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
             >
-              <div className="relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 w-64 h-80">
-                <ResponsiveImage
-                  src={getOptimizedImagePath(image.src)}
-                  alt={image.alt}
-                  className="object-cover transition-transform duration-500 group-hover:scale-105 w-full h-full"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300" />
+              <div className="relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 w-64 h-80 bg-white">
+                <div 
+                  className="w-full h-full transform transition-transform duration-500 ease-out"
+                  style={{
+                    transform: hoveredIndex === index ? 'scale(1.1)' : 'scale(1)'
+                  }}
+                >
+                  <ResponsiveImage
+                    src={getOptimizedImagePath(image.src)}
+                    alt={image.alt}
+                    className="object-contain w-full h-full"
+                  />
+                </div>
               </div>
             </Link>
           ))}
@@ -237,7 +246,7 @@ function SubcategorySection({
                     });
                   }
                 }}
-                className={`transition-all duration-300 rounded-full ${
+                className={`transition-all duration-300 rounded-full cursor-pointer ${
                   index === activeDotIndex
                     ? 'w-4 h-4 bg-teal-400'
                     : 'w-3 h-3 bg-gray-400 hover:bg-gray-500'

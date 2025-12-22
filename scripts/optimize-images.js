@@ -3,15 +3,15 @@ const fs = require('fs');
 const path = require('path');
 
 // Configuration
-const inputDir = './public/images/original'; // Your large images
+const inputDir = './public/images/original';
 const outputDir = './public/images/optimized';
 
-// Image sizes to generate
+// Image sizes to generate (width-based, height auto-adjusts)
 const sizes = {
-  thumbnail: { width: 300, height: 200, quality: 80 },
-  small: { width: 600, height: 400, quality: 85 },
-  medium: { width: 1200, height: 800, quality: 90 },
-  large: { width: 1920, height: 1280, quality: 95 }
+  thumbnail: { width: 300, quality: 80 },
+  small: { width: 600, quality: 85 },
+  medium: { width: 1200, quality: 90 },
+  large: { width: 1920, quality: 95 }
 };
 
 async function processDirectory(dir, relativePath = '') {
@@ -22,11 +22,9 @@ async function processDirectory(dir, relativePath = '') {
     const stats = fs.statSync(fullPath);
     
     if (stats.isDirectory()) {
-      // Recursively process subdirectories
       const newRelativePath = path.join(relativePath, item);
       await processDirectory(fullPath, newRelativePath);
     } else if (/\.(jpg|jpeg|png|webp)$/i.test(item)) {
-      // Process image file
       await processImage(fullPath, relativePath, item);
     }
   }
@@ -34,11 +32,13 @@ async function processDirectory(dir, relativePath = '') {
 
 async function processImage(inputPath, relativePath, fileName) {
   const fileNameWithoutExt = path.parse(fileName).name;
-  console.log(`Processing: ${path.join(relativePath, fileName)}`);
   
-  // Generate each size
+  // Get original dimensions
+  const metadata = await sharp(inputPath).metadata();
+  console.log(`\n📸 Processing: ${path.join(relativePath, fileName)}`);
+  console.log(`   Original: ${metadata.width}x${metadata.height}`);
+  
   for (const [sizeName, config] of Object.entries(sizes)) {
-    // Create output directory structure
     const outputSizeDir = path.join(outputDir, sizeName, relativePath);
     if (!fs.existsSync(outputSizeDir)) {
       fs.mkdirSync(outputSizeDir, { recursive: true });
@@ -46,29 +46,29 @@ async function processImage(inputPath, relativePath, fileName) {
     
     const outputPath = path.join(outputSizeDir, `${fileNameWithoutExt}.webp`);
     
-    await sharp(inputPath)
-      .resize(config.width, config.height, {
-        fit: 'cover',
-        position: 'center'
+    // Process with no cropping
+    const image = sharp(inputPath)
+      .resize(config.width, null, {
+        fit: 'inside',
+        withoutEnlargement: true
       })
-      .webp({ quality: config.quality })
-      .toFile(outputPath);
-
-    console.log(`  ✅ ${sizeName}: ${outputPath}`);
+      .webp({ quality: config.quality });
+    
+    await image.toFile(outputPath);
+    
+    // Get output dimensions to verify
+    const outputMetadata = await sharp(outputPath).metadata();
+    console.log(`   ✅ ${sizeName}: ${outputMetadata.width}x${outputMetadata.height}`);
   }
 }
 
 async function optimizeImages() {
-  // Create base output directory
   if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir, { recursive: true });
   }
 
-  // Process all images recursively
   await processDirectory(inputDir);
   
-  console.log('Images optimized.');
 }
 
-// Run the optimization
 optimizeImages().catch(console.error);

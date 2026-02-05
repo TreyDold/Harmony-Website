@@ -47,7 +47,8 @@ export default function CategoryPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="px-8 space-y-20" style={{ paddingTop: '140px', paddingBottom: '60px' }}>
+      {/* Responsive top padding: smaller on mobile (stacked header), larger on desktop */}
+      <div className="px-4 sm:px-8 space-y-14 sm:space-y-20 pt-28 sm:pt-36 pb-12 sm:pb-16">
         {subcategories.map((subcategory) => {
           const subcategoryImages = categoryImages.filter(img => img.subcategory === subcategory);
           
@@ -164,23 +165,23 @@ function SubcategorySection({
 
   return (
     <section>
-      {/* Clickable category title */}
+      {/* Clickable category title — responsive size */}
       <Link 
         href={`/gallery/${category}/${subcategory}`}
-        className="inline-block mb-10 group"
+        className="inline-block mb-6 sm:mb-10 group"
       >
-        <h2 className="text-5xl font-serif text-gray-900 tracking-wide transition-colors duration-300 group-hover:text-gray-600">
+        <h2 className="text-3xl sm:text-5xl font-serif text-gray-900 tracking-wide transition-colors duration-300 group-hover:text-gray-600">
           {formatSubcategoryName(subcategory)}
         </h2>
       </Link>
 
       {/* Container with arrows */}
       <div className="relative">
-        {/* Left arrow */}
+        {/* Left arrow — hidden on touch devices, visible on hover for desktop */}
         <button
           onClick={() => scroll('left')}
-          className={`absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/70 hover:bg-black/90 text-white p-3 rounded-full transition-opacity duration-300 cursor-pointer ${
-            isLeftSide ? 'opacity-100' : 'opacity-0'
+          className={`absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/70 hover:bg-black/90 text-white p-3 rounded-full transition-opacity duration-300 cursor-pointer hidden sm:block ${
+            isLeftSide ? 'sm:opacity-100' : 'sm:opacity-0'
           }`}
           aria-label="Scroll left"
         >
@@ -190,28 +191,28 @@ function SubcategorySection({
         {/* Right arrow */}
         <button
           onClick={() => scroll('right')}
-          className={`absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/70 hover:bg-black/90 text-white p-3 rounded-full transition-opacity duration-300 cursor-pointer ${
-            isRightSide ? 'opacity-100' : 'opacity-0'
+          className={`absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/70 hover:bg-black/90 text-white p-3 rounded-full transition-opacity duration-300 cursor-pointer hidden sm:block ${
+            isRightSide ? 'sm:opacity-100' : 'sm:opacity-0'
           }`}
           aria-label="Scroll right"
         >
           <ChevronRight className="w-6 h-6" />
         </button>
 
-        {/* Horizontal scrolling images */}
+        {/* Horizontal scrolling images — snap on mobile for better touch UX */}
         <div 
           ref={scrollRef}
-          className="flex overflow-x-auto scrollbar-none pb-6 gap-6"
+          className="flex overflow-x-auto scrollbar-none pb-6 gap-4 sm:gap-6 snap-x snap-mandatory sm:snap-none"
         >
           {images.map((image, index) => (
             <Link
               key={image.src}
               href={`/gallery/${category}/${subcategory}/${index}`}
-              className="flex-shrink-0 cursor-pointer"
+              className="flex-shrink-0 cursor-pointer snap-start"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <div className="relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 w-64 h-80 bg-white">
+              <div className="relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 w-52 h-72 sm:w-64 sm:h-80 bg-white">
                 <div 
                   className="w-full h-full transform transition-transform duration-500 ease-out"
                   style={{

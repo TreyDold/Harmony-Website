@@ -5,7 +5,7 @@ import Link from "next/link";
 import { notFound, useRouter } from "next/navigation";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import imagesData from "@/data/images.json";
-import { use } from "react";
+import { use, useEffect } from "react";
 
 type ImageType = {
   category: string;
@@ -24,7 +24,6 @@ interface PageProps {
   }>;
 }
 
-// Helper function to convert old paths to optimized paths
 const getOptimizedImagePath = (oldSrc: string) => {
   return oldSrc
     .replace('/gallery/', '')
@@ -35,7 +34,6 @@ export default function ImageViewerPage({ params }: PageProps) {
   const { category, subcategory, imageId } = use(params);
   const router = useRouter();
 
-  // Get all images in this subcategory
   const subcategoryImages = images.filter(
     (img) => img.category === category && img.subcategory === subcategory
   );
@@ -44,10 +42,8 @@ export default function ImageViewerPage({ params }: PageProps) {
     notFound();
   }
 
-  // Parse the index from the imageId
   const currentIndex = parseInt(imageId, 10);
 
-  // Check if index is valid
   if (isNaN(currentIndex) || currentIndex < 0 || currentIndex >= subcategoryImages.length) {
     notFound();
   }
@@ -68,81 +64,72 @@ export default function ImageViewerPage({ params }: PageProps) {
     }
   };
 
-  // Keyboard navigation
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'ArrowLeft' && hasPrevious) {
-      goToPrevious();
-    } else if (e.key === 'ArrowRight' && hasNext) {
-      goToNext();
-    } else if (e.key === 'Escape') {
-      router.push(`/gallery/${category}`);
-    }
-  };
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft' && hasPrevious) {
+        goToPrevious();
+      } else if (e.key === 'ArrowRight' && hasNext) {
+        goToNext();
+      } else if (e.key === 'Escape') {
+        router.push(`/gallery/${category}/${subcategory}`);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [hasPrevious, hasNext, currentIndex, category, subcategory, router]);
 
   return (
-    <div 
-      className="fixed inset-0 bg-black z-50 flex items-center justify-center"
-      onKeyDown={handleKeyDown}
-      tabIndex={0}
-    >
-      {/* Close button */}
-      <Link
-        href={`/gallery/${category}`}
-        className="absolute top-6 right-6 z-50 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-all duration-300 cursor-pointer"
-        aria-label="Close"
-      >
-        <X className="w-6 h-6" />
-      </Link>
-
-      {/* Image counter */}
-      <div className="absolute top-6 left-6 z-50 text-white text-lg font-medium bg-black/50 px-4 py-2 rounded-full">
-        {currentIndex + 1} / {subcategoryImages.length}
-      </div>
-
-      {/* Previous button */}
-      {hasPrevious && (
-        <button
-          onClick={goToPrevious}
-          className="absolute left-6 top-1/2 -translate-y-1/2 z-50 bg-white/10 hover:bg-white/20 text-white p-4 rounded-full transition-all duration-300 cursor-pointer"
-          aria-label="Previous image"
-        >
-          <ChevronLeft className="w-8 h-8" />
-        </button>
-      )}
-
-      {/* Next button */}
-      {hasNext && (
-        <button
-          onClick={goToNext}
-          className="absolute right-6 top-1/2 -translate-y-1/2 z-50 bg-white/10 hover:bg-white/20 text-white p-4 rounded-full transition-all duration-300 cursor-pointer"
-          aria-label="Next image"
-        >
-          <ChevronRight className="w-8 h-8" />
-        </button>
-      )}
-
-      {/* Main image */}
-      <div className="relative w-full h-full flex items-center justify-center p-12">
-        <Image
-          src={`/images/optimized/large/${getOptimizedImagePath(currentImage.src)}.webp`}
-          alt={currentImage.alt}
-          fill
-          className="object-contain"
-          priority
-          sizes="100vw"
-        />
-      </div>
-
-      {/* Image title/alt text */}
-      {currentImage.alt && (
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-50 text-white text-center bg-black/50 px-6 py-3 rounded-full max-w-2xl">
-          {currentImage.alt}
+    <div className="fixed inset-0 bg-black z-50 flex flex-col">
+      {/* Top bar with counter and close */}
+      <div className="flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 shrink-0">
+        <div className="text-white text-sm sm:text-base font-medium bg-black/50 px-3 py-1.5 rounded-full">
+          {currentIndex + 1} / {subcategoryImages.length}
         </div>
-      )}
+        <Link
+          href={`/gallery/${category}/${subcategory}`}
+          className="bg-white/10 hover:bg-white/20 text-white p-2 sm:p-2.5 rounded-full transition-all duration-300 cursor-pointer"
+          aria-label="Close"
+        >
+          <X className="w-5 h-5 sm:w-6 sm:h-6" />
+        </Link>
+      </div>
 
-      {/* Navigation hint */}
-      <div className="absolute bottom-6 right-6 z-50 text-white/70 text-sm bg-black/30 px-4 py-2 rounded-full">
-        Use ← → keys to navigate
+      {/* Image area — fills remaining vertical space */}
+      <div className="flex-1 relative min-h-0 px-10 sm:px-16 md:px-20 pb-4 sm:pb-6">
+        {/* Previous button */}
+        {hasPrevious && (
+          <button
+            onClick={goToPrevious}
+            className="absolute left-1 sm:left-3 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-white/20 text-white p-1.5 sm:p-2.5 rounded-full transition-all duration-300 cursor-pointer"
+            aria-label="Previous image"
+          >
+            <ChevronLeft className="w-5 h-5 sm:w-7 sm:h-7" />
+          </button>
+        )}
+
+        {/* Next button */}
+        {hasNext && (
+          <button
+            onClick={goToNext}
+            className="absolute right-1 sm:right-3 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-white/20 text-white p-1.5 sm:p-2.5 rounded-full transition-all duration-300 cursor-pointer"
+            aria-label="Next image"
+          >
+            <ChevronRight className="w-5 h-5 sm:w-7 sm:h-7" />
+          </button>
+        )}
+
+        {/* Image — fills the flex area, object-contain keeps aspect ratio */}
+        <div className="relative w-full h-full">
+          <Image
+            src={`/images/optimized/large/${getOptimizedImagePath(currentImage.src)}.webp`}
+            alt={currentImage.alt}
+            fill
+            className="object-contain"
+            priority
+            sizes="100vw"
+          />
+        </div>
       </div>
     </div>
   );

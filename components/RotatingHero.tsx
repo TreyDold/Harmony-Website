@@ -120,8 +120,6 @@ export default function RotatingHero({
     <div
       ref={containerRef}
       className="relative h-screen w-full overflow-hidden bg-black"
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
     >
       {pool.map((it, i) => {
         const showing = i === idx;
@@ -143,6 +141,13 @@ export default function RotatingHero({
       {/* Subtle vignette effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30" />
       <div className="absolute inset-0 bg-gradient-to-r from-black/5 via-transparent to-black/5" />
+
+      {/* Transparent touch layer — captures swipe on mobile */}
+      <div
+        className="absolute inset-0 z-40 sm:pointer-events-none"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      />
 
       {/* Navigation arrows — hidden on mobile (sm:block), cursor-based on desktop */}
       {pool.length > 1 && (

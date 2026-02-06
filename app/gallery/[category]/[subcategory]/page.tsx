@@ -59,10 +59,8 @@ export default function SubcategoryPage({ params }: PageProps) {
     // Special case: 7 images → 3-2-2 layout
     if (count === 7) {
       if (index < 3) {
-        // First 3 images: 33.333% width (3 columns)
         return 'md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]';
       } else {
-        // Last 4 images: 50% width (2 columns)
         return 'md:w-[calc(50%-12px)] lg:w-[calc(50%-12px)]';
       }
     }
@@ -70,10 +68,8 @@ export default function SubcategoryPage({ params }: PageProps) {
     // Special case: 10 images → 3-3-2-2 layout
     if (count === 10) {
       if (index < 6) {
-        // First 6 images: 33.333% width (3 columns)
         return 'md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]';
       } else {
-        // Last 4 images: 50% width (2 columns)
         return 'md:w-[calc(50%-12px)] lg:w-[calc(50%-12px)]';
       }
     }
@@ -81,27 +77,23 @@ export default function SubcategoryPage({ params }: PageProps) {
     // Special case: 13 images → 3-3-3-2-2 layout
     if (count === 13) {
       if (index < 9) {
-        // First 9 images: 33.333% width (3 columns)
         return 'md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]';
       } else {
-        // Last 4 images: 50% width (2 columns)
         return 'md:w-[calc(50%-12px)] lg:w-[calc(50%-12px)]';
       }
     }
     
     // General rule: if count % 3 == 1, use 2-column for last 4 images
     if (count > 4 && count % 3 === 1) {
-      const cutoff = count - 4; // Split point
+      const cutoff = count - 4;
       if (index < cutoff) {
-        // First images: 3 columns
         return 'md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]';
       } else {
-        // Last 4 images: 2 columns
         return 'md:w-[calc(50%-12px)] lg:w-[calc(50%-12px)]';
       }
     }
     
-    // Default: 3-column layout (works for 1, 2, 3, 5, 6, 8, 9, 11, 12, etc.)
+    // Default: 3-column layout
     return 'md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]';
   };
 
@@ -109,7 +101,8 @@ export default function SubcategoryPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-[1800px] mx-auto px-6 pt-20 pb-16">
+      {/* Responsive padding: more on mobile for stacked header, less on desktop */}
+      <div className="max-w-[1800px] mx-auto px-4 sm:px-6 pt-28 sm:pt-24 pb-12 sm:pb-16">
         {/* Back Navigation */}
         <Link
           href={`/gallery/${category}`}
@@ -121,7 +114,7 @@ export default function SubcategoryPage({ params }: PageProps) {
 
         {/* Header */}
         <div className="mb-8 text-center">
-          <h1 className="text-5xl sm:text-6xl font-serif text-gray-900 mb-2">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-gray-900 mb-2">
             {formatSubcategoryName(subcategory)}
           </h1>
           <p className="text-base text-gray-600">
@@ -132,7 +125,7 @@ export default function SubcategoryPage({ params }: PageProps) {
         {/* Images - Smart flex layout with dynamic widths */}
         {isSpecialFourLayout ? (
           // Special 2x2 grid for exactly 4 images
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[1200px] mx-auto">
+          <div className="grid grid-cols-2 gap-3 sm:gap-6 max-w-[1200px] mx-auto">
             {subcategoryImages.map((image, index) => (
               <Link
                 key={image.src}
@@ -158,8 +151,8 @@ export default function SubcategoryPage({ params }: PageProps) {
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 
-                {/* Click hint on hover */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                {/* Click hint on hover — hidden on mobile */}
+                <div className="absolute inset-0 hidden sm:flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                   <span className="bg-white/90 text-gray-900 px-4 py-2 rounded-full text-sm font-medium">
                     View Full Size
                   </span>
@@ -169,12 +162,12 @@ export default function SubcategoryPage({ params }: PageProps) {
           </div>
         ) : (
           // Flex layout with smart width calculation for all other counts
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-6">
             {subcategoryImages.map((image, index) => (
               <Link
                 key={image.src}
                 href={`/gallery/${category}/${subcategory}/${index}`}
-                className={`group relative overflow-hidden bg-white aspect-[3/4] w-full ${getLayoutClass(count, index)} max-w-[500px] cursor-pointer`}
+                className={`group relative overflow-hidden bg-white aspect-[3/4] w-[calc(50%-6px)] ${getLayoutClass(count, index)} max-w-[500px] cursor-pointer`}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
@@ -195,8 +188,8 @@ export default function SubcategoryPage({ params }: PageProps) {
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 
-                {/* Click hint on hover */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                {/* Click hint on hover — hidden on mobile */}
+                <div className="absolute inset-0 hidden sm:flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                   <span className="bg-white/90 text-gray-900 px-4 py-2 rounded-full text-sm font-medium">
                     View Full Size
                   </span>
@@ -207,8 +200,8 @@ export default function SubcategoryPage({ params }: PageProps) {
         )}
 
         {/* Related Categories */}
-        <div className="mt-20 pt-12 border-t border-gray-200">
-          <h2 className="text-2xl font-serif text-gray-900 mb-8">
+        <div className="mt-16 sm:mt-20 pt-8 sm:pt-12 border-t border-gray-200">
+          <h2 className="text-xl sm:text-2xl font-serif text-gray-900 mb-6 sm:mb-8">
             More {category}
           </h2>
           
@@ -221,7 +214,7 @@ export default function SubcategoryPage({ params }: PageProps) {
               <Link
                 key={otherSubcategory}
                 href={`/gallery/${category}/${otherSubcategory}`}
-                className="px-5 py-2.5 rounded-full border border-gray-300 text-sm text-gray-700 hover:border-gray-900 hover:text-gray-900 hover:bg-gray-50 transition-all duration-300"
+                className="px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border border-gray-300 text-sm text-gray-700 hover:border-gray-900 hover:text-gray-900 hover:bg-gray-50 transition-all duration-300"
               >
                 {formatSubcategoryName(otherSubcategory)}
               </Link>

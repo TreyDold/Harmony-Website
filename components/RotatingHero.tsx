@@ -29,6 +29,7 @@ export default function RotatingHero({
   const [mouseX, setMouseX] = useState<number | null>(null);
   const [windowWidth, setWindowWidth] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
+  const touchStartX = useRef<number | null>(null);
 
   // Only shuffle images after component mounts on client
   useEffect(() => {
@@ -52,7 +53,6 @@ export default function RotatingHero({
   }, [pool.length, intervalMs]);
 
   useEffect(() => {
-    // Set initial window width
     const updateWidth = () => {
       setWindowWidth(window.innerWidth);
     };
@@ -71,7 +71,6 @@ export default function RotatingHero({
       updateWidth();
     };
 
-    // Listen to window, not container
     window.addEventListener('mousemove', handleMouseMove);
     document.addEventListener('mouseleave', handleMouseLeave);
     window.addEventListener('resize', handleResize);
@@ -91,6 +90,23 @@ export default function RotatingHero({
     setIdx((i) => (i + 1) % pool.length);
   };
 
+  // Touch swipe handlers
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const diff = touchStartX.current - e.changedTouches[0].clientX;
+    const threshold = 50; // minimum swipe distance in px
+    if (diff > threshold) {
+      goToNext();
+    } else if (diff < -threshold) {
+      goToPrevious();
+    }
+    touchStartX.current = null;
+  };
+
   // Determine which side of the screen the cursor is on
   const isLeftSide = mouseX !== null && windowWidth > 0 && mouseX < windowWidth / 2;
   const isRightSide = mouseX !== null && windowWidth > 0 && mouseX >= windowWidth / 2;
@@ -101,7 +117,12 @@ export default function RotatingHero({
   }
 
   return (
-    <div ref={containerRef} className="relative h-screen w-full overflow-hidden bg-black">
+    <div
+      ref={containerRef}
+      className="relative h-screen w-full overflow-hidden bg-black"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
       {pool.map((it, i) => {
         const showing = i === idx;
         return (
@@ -123,25 +144,23 @@ export default function RotatingHero({
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30" />
       <div className="absolute inset-0 bg-gradient-to-r from-black/5 via-transparent to-black/5" />
 
-      {/* Navigation arrows - appear based on cursor position */}
+      {/* Navigation arrows — hidden on mobile (sm:block), cursor-based on desktop */}
       {pool.length > 1 && (
         <>
-          {/* Left arrow - shows when cursor is on left half */}
           <button
             onClick={goToPrevious}
-            className={`absolute left-8 top-1/2 -translate-y-1/2 z-50 bg-black/70 hover:bg-black/90 text-white p-4 rounded-full transition-all duration-300 cursor-pointer ${
-              isLeftSide ? 'opacity-100' : 'opacity-0'
+            className={`absolute left-8 top-1/2 -translate-y-1/2 z-50 bg-black/70 hover:bg-black/90 text-white p-4 rounded-full transition-all duration-300 cursor-pointer hidden sm:block ${
+              isLeftSide ? 'sm:opacity-100' : 'sm:opacity-0'
             }`}
             aria-label="Previous image"
           >
             <ChevronLeft className="w-8 h-8" />
           </button>
 
-          {/* Right arrow - shows when cursor is on right half */}
           <button
             onClick={goToNext}
-            className={`absolute right-8 top-1/2 -translate-y-1/2 z-50 bg-black/70 hover:bg-black/90 text-white p-4 rounded-full transition-all duration-300 cursor-pointer ${
-              isRightSide ? 'opacity-100' : 'opacity-0'
+            className={`absolute right-8 top-1/2 -translate-y-1/2 z-50 bg-black/70 hover:bg-black/90 text-white p-4 rounded-full transition-all duration-300 cursor-pointer hidden sm:block ${
+              isRightSide ? 'sm:opacity-100' : 'sm:opacity-0'
             }`}
             aria-label="Next image"
           >

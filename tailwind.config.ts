@@ -9,7 +9,7 @@ export default {
     extend: {
       fontFamily: {
         serif: ['ui-serif','Georgia','Cambria','Times New Roman','Times', 'serif'],
-      }
+      },
     },
   },
   plugins: [],

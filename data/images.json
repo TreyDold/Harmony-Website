@@ -1,123 +1,2990 @@
 [
     {
-        "category":  "drawings",
-        "subcategory":  "mixed_media",
-        "src":  "/gallery/drawings/mixed_media/5M6A6446-1 copy.jpg",
-        "alt":  "5M6A6446-1 copy"
+        "category": "drawings",
+        "subcategory": "mixed_media",
+        "src": "/gallery/drawings/mixed_media/5M6A6446-1 copy.jpg",
+        "alt": "5M6A6446-1 copy"
     },
     {
-        "category":  "drawings",
-        "subcategory":  "mixed_media",
-        "src":  "/gallery/drawings/mixed_media/EXPLANATION.jpg",
-        "alt":  "EXPLANATION"
+        "category": "drawings",
+        "subcategory": "mixed_media",
+        "src": "/gallery/drawings/mixed_media/EXPLANATION.jpg",
+        "alt": "EXPLANATION"
     },
     {
-        "category":  "drawings",
-        "subcategory":  "mixed_media",
-        "src":  "/gallery/drawings/mixed_media/Fsphere.jpg",
-        "alt":  "Fsphere"
+        "category": "drawings",
+        "subcategory": "mixed_media",
+        "src": "/gallery/drawings/mixed_media/Fsphere.jpg",
+        "alt": "Fsphere"
     },
     {
-        "category":  "drawings",
-        "subcategory":  "mixed_media",
-        "src":  "/gallery/drawings/mixed_media/Harmony_select_00005.jpg",
-        "alt":  "Harmony select 00005"
+        "category": "drawings",
+        "subcategory": "mixed_media",
+        "src": "/gallery/drawings/mixed_media/Harmony_select_00005.jpg",
+        "alt": "Harmony select 00005"
     },
     {
-        "category":  "drawings",
-        "subcategory":  "mixed_media",
-        "src":  "/gallery/drawings/mixed_media/Layer 21 copy.jpg",
-        "alt":  "Layer 21 copy"
+        "category": "drawings",
+        "subcategory": "mixed_media",
+        "src": "/gallery/drawings/mixed_media/Layer 21 copy.jpg",
+        "alt": "Layer 21 copy"
     },
     {
-        "category":  "drawings",
-        "subcategory":  "pen_and_paper",
-        "src":  "/gallery/drawings/pen_and_paper/4corn.jpg",
-        "alt":  "4corn"
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/4corn.jpg",
+        "alt": "4corn"
     },
     {
-        "category":  "drawings",
-        "subcategory":  "pen_and_paper",
-        "src":  "/gallery/drawings/pen_and_paper/DBD_wordless.jpg",
-        "alt":  "DBD wordless"
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/DBD_wordless.jpg",
+        "alt": "DBD wordless"
     },
     {
-        "category":  "drawings",
-        "subcategory":  "pen_and_paper",
-        "src":  "/gallery/drawings/pen_and_paper/T_collect.jpg",
-        "alt":  "T collect"
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/T_collect.jpg",
+        "alt": "T collect"
     },
     {
-        "category":  "drawings",
-        "subcategory":  "quilt",
-        "src":  "/gallery/drawings/quilt/14.1.jpg",
-        "alt":  "14.1"
+        "category": "drawings",
+        "subcategory": "quilt",
+        "src": "/gallery/drawings/quilt/14.1.jpg",
+        "alt": "14.1"
     },
     {
-        "category":  "drawings",
-        "subcategory":  "quilt",
-        "src":  "/gallery/drawings/quilt/Harmony_select_00005.jpg",
-        "alt":  "Harmony select 00005"
+        "category": "drawings",
+        "subcategory": "quilt",
+        "src": "/gallery/drawings/quilt/Harmony_select_00005.jpg",
+        "alt": "Harmony select 00005"
     },
     {
-        "category":  "photos",
-        "subcategory":  "abstracts",
-        "src":  "/gallery/photos/abstracts/Front_backsides.jpg",
-        "alt":  "Front backsides"
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/65_MG_8637.jpg",
+        "alt": "65 MG 8637"
     },
     {
-        "category":  "photos",
-        "subcategory":  "abstracts",
-        "src":  "/gallery/photos/abstracts/LIGHTS 21.jpg",
-        "alt":  "LIGHTS 21"
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/HarmonySubmission2.jpg",
+        "alt": "HarmonySubmission2"
     },
     {
-        "category":  "photos",
-        "subcategory":  "abstracts",
-        "src":  "/gallery/photos/abstracts/snips12.jpg",
-        "alt":  "snips12"
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_0058.jpg",
+        "alt": "MG 0058"
     },
     {
-        "category":  "photos",
-        "subcategory":  "faces",
-        "src":  "/gallery/photos/faces/65_MG_8637.jpg",
-        "alt":  "65 MG 8637"
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8521.jpg",
+        "alt": "MG 8521"
     },
     {
-        "category":  "photos",
-        "subcategory":  "faces",
-        "src":  "/gallery/photos/faces/HarmonySubmission2.jpg",
-        "alt":  "HarmonySubmission2"
+        "category": "photos",
+        "subcategory": "portraits",
+        "src": "/gallery/photos/portraits/KJ.jpg",
+        "alt": "KJ"
     },
     {
-        "category":  "photos",
-        "subcategory":  "faces",
-        "src":  "/gallery/photos/faces/_MG_0058.jpg",
-        "alt":  " MG 0058"
+        "category": "photos",
+        "subcategory": "portraits",
+        "src": "/gallery/photos/portraits/L_Liam.jpg",
+        "alt": "L Liam"
     },
     {
-        "category":  "photos",
-        "subcategory":  "faces",
-        "src":  "/gallery/photos/faces/_MG_8521.jpg",
-        "alt":  " MG 8521"
+        "category": "photos",
+        "subcategory": "portraits",
+        "src": "/gallery/photos/portraits/Mike Lopez.jpg",
+        "alt": "Mike Lopez"
     },
     {
-        "category":  "photos",
-        "subcategory":  "portraits",
-        "src":  "/gallery/photos/portraits/KJ.jpg",
-        "alt":  "KJ"
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/6-PERSONAL.jpg",
+        "alt": "6 PERSONAL"
     },
     {
-        "category":  "photos",
-        "subcategory":  "portraits",
-        "src":  "/gallery/photos/portraits/L_Liam.jpg",
-        "alt":  "L Liam"
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/crop00001.jpg",
+        "alt": "crop00001"
     },
     {
-        "category":  "photos",
-        "subcategory":  "portraits",
-        "src":  "/gallery/photos/portraits/Mike Lopez.jpg",
-        "alt":  "Mike Lopez"
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/spiral00001.jpg",
+        "alt": "spiral00001"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/spiral00002.jpg",
+        "alt": "spiral00002"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/spiral00003.jpg",
+        "alt": "spiral00003"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/spiral00005.jpg",
+        "alt": "spiral00005"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/stack00001.jpg",
+        "alt": "stack00001"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/stack00002.jpg",
+        "alt": "stack00002"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/stack00003.jpg",
+        "alt": "stack00003"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/stack00004.jpg",
+        "alt": "stack00004"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/stack00005.jpg",
+        "alt": "stack00005"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/stack00006.jpg",
+        "alt": "stack00006"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/stack00007.jpg",
+        "alt": "stack00007"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/stack00008.jpg",
+        "alt": "stack00008"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/stack00009.jpg",
+        "alt": "stack00009"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/stack00010.jpg",
+        "alt": "stack00010"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/stack00011.jpg",
+        "alt": "stack00011"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/stack00012.jpg",
+        "alt": "stack00012"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/stack00013.jpg",
+        "alt": "stack00013"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/stack00014.jpg",
+        "alt": "stack00014"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/stack00015.jpg",
+        "alt": "stack00015"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/stack00016.jpg",
+        "alt": "stack00016"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/stack00017.jpg",
+        "alt": "stack00017"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/stack00018.jpg",
+        "alt": "stack00018"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/stack00019.jpg",
+        "alt": "stack00019"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/stack00020.jpg",
+        "alt": "stack00020"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/stack00021.jpg",
+        "alt": "stack00021"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/stack00022.jpg",
+        "alt": "stack00022"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_2839.jpg",
+        "alt": "MG 2839"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_2840.jpg",
+        "alt": "MG 2840"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_2846.jpg",
+        "alt": "MG 2846"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_2847.jpg",
+        "alt": "MG 2847"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_2849.jpg",
+        "alt": "MG 2849"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_2850.jpg",
+        "alt": "MG 2850"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_2854.jpg",
+        "alt": "MG 2854"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_2860.jpg",
+        "alt": "MG 2860"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_2864.jpg",
+        "alt": "MG 2864"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_2865.jpg",
+        "alt": "MG 2865"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_2867.jpg",
+        "alt": "MG 2867"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_4994.jpg",
+        "alt": "MG 4994"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_5191.jpg",
+        "alt": "MG 5191"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_5199.jpg",
+        "alt": "MG 5199"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_5202.jpg",
+        "alt": "MG 5202"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_5455.jpg",
+        "alt": "MG 5455"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_5475.jpg",
+        "alt": "MG 5475"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_5486_1.jpg",
+        "alt": "MG 5486 1"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_5500.jpg",
+        "alt": "MG 5500"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_5602.jpg",
+        "alt": "MG 5602"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_5607.jpg",
+        "alt": "MG 5607"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_5627.jpg",
+        "alt": "MG 5627"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_7924.jpg",
+        "alt": "MG 7924"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_7925.jpg",
+        "alt": "MG 7925"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_7930.jpg",
+        "alt": "MG 7930"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_7932.jpg",
+        "alt": "MG 7932"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_7933.jpg",
+        "alt": "MG 7933"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_7934.jpg",
+        "alt": "MG 7934"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_7937.jpg",
+        "alt": "MG 7937"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_7938.jpg",
+        "alt": "MG 7938"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_7939.jpg",
+        "alt": "MG 7939"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_7940.jpg",
+        "alt": "MG 7940"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_7942.jpg",
+        "alt": "MG 7942"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_7944.jpg",
+        "alt": "MG 7944"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_7948.jpg",
+        "alt": "MG 7948"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8302.jpg",
+        "alt": "MG 8302"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8303.jpg",
+        "alt": "MG 8303"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8308.jpg",
+        "alt": "MG 8308"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8309.jpg",
+        "alt": "MG 8309"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8310.jpg",
+        "alt": "MG 8310"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8314.jpg",
+        "alt": "MG 8314"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8317.jpg",
+        "alt": "MG 8317"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8319.jpg",
+        "alt": "MG 8319"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8320.jpg",
+        "alt": "MG 8320"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8323.jpg",
+        "alt": "MG 8323"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8341.jpg",
+        "alt": "MG 8341"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8343.jpg",
+        "alt": "MG 8343"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8344.jpg",
+        "alt": "MG 8344"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8344_1.jpg",
+        "alt": "MG 8344 1"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8351.jpg",
+        "alt": "MG 8351"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8355.jpg",
+        "alt": "MG 8355"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8356.jpg",
+        "alt": "MG 8356"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8360.jpg",
+        "alt": "MG 8360"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8363.jpg",
+        "alt": "MG 8363"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8364.jpg",
+        "alt": "MG 8364"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8369.jpg",
+        "alt": "MG 8369"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8377.jpg",
+        "alt": "MG 8377"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8379.jpg",
+        "alt": "MG 8379"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8381.jpg",
+        "alt": "MG 8381"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8382.jpg",
+        "alt": "MG 8382"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8386.jpg",
+        "alt": "MG 8386"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8523.jpg",
+        "alt": "MG 8523"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8592.jpg",
+        "alt": "MG 8592"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8595.jpg",
+        "alt": "MG 8595"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8596.jpg",
+        "alt": "MG 8596"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8598.jpg",
+        "alt": "MG 8598"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8599.jpg",
+        "alt": "MG 8599"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8636.jpg",
+        "alt": "MG 8636"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8637.jpg",
+        "alt": "MG 8637"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8638.jpg",
+        "alt": "MG 8638"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8639.jpg",
+        "alt": "MG 8639"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8640.jpg",
+        "alt": "MG 8640"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8642.jpg",
+        "alt": "MG 8642"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8643.jpg",
+        "alt": "MG 8643"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8644.jpg",
+        "alt": "MG 8644"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8647.jpg",
+        "alt": "MG 8647"
+    },
+    {
+        "category": "photos",
+        "subcategory": "faces",
+        "src": "/gallery/photos/faces/_MG_8649.jpg",
+        "alt": "MG 8649"
+    },
+    {
+        "category": "photos",
+        "subcategory": "front_backs",
+        "src": "/gallery/photos/front_backs/Archval_FSBS.jpg",
+        "alt": "Archval FSBS"
+    },
+    {
+        "category": "photos",
+        "subcategory": "front_backs",
+        "src": "/gallery/photos/front_backs/stamps_FSBS.jpg",
+        "alt": "stamps FSBS"
+    },
+    {
+        "category": "photos",
+        "subcategory": "front_backs",
+        "src": "/gallery/photos/front_backs/Test_Paper.jpg",
+        "alt": "Test Paper"
+    },
+    {
+        "category": "photos",
+        "subcategory": "landscapes",
+        "src": "/gallery/photos/landscapes/land00001.jpg",
+        "alt": "land00001"
+    },
+    {
+        "category": "photos",
+        "subcategory": "landscapes",
+        "src": "/gallery/photos/landscapes/land00002.jpg",
+        "alt": "land00002"
+    },
+    {
+        "category": "photos",
+        "subcategory": "landscapes",
+        "src": "/gallery/photos/landscapes/land00003.jpg",
+        "alt": "land00003"
+    },
+    {
+        "category": "photos",
+        "subcategory": "landscapes",
+        "src": "/gallery/photos/landscapes/land00004.jpg",
+        "alt": "land00004"
+    },
+    {
+        "category": "photos",
+        "subcategory": "landscapes",
+        "src": "/gallery/photos/landscapes/land00005.jpg",
+        "alt": "land00005"
+    },
+    {
+        "category": "photos",
+        "subcategory": "landscapes",
+        "src": "/gallery/photos/landscapes/land00006.jpg",
+        "alt": "land00006"
+    },
+    {
+        "category": "photos",
+        "subcategory": "landscapes",
+        "src": "/gallery/photos/landscapes/land00007.jpg",
+        "alt": "land00007"
+    },
+    {
+        "category": "photos",
+        "subcategory": "landscapes",
+        "src": "/gallery/photos/landscapes/land00008.jpg",
+        "alt": "land00008"
+    },
+    {
+        "category": "photos",
+        "subcategory": "landscapes",
+        "src": "/gallery/photos/landscapes/land00009.jpg",
+        "alt": "land00009"
+    },
+    {
+        "category": "photos",
+        "subcategory": "landscapes",
+        "src": "/gallery/photos/landscapes/land00010.jpg",
+        "alt": "land00010"
+    },
+    {
+        "category": "photos",
+        "subcategory": "landscapes",
+        "src": "/gallery/photos/landscapes/land00011.jpg",
+        "alt": "land00011"
+    },
+    {
+        "category": "photos",
+        "subcategory": "lights",
+        "src": "/gallery/photos/lights/LIGHTS 01_1.jpg",
+        "alt": "LIGHTS 01 1"
+    },
+    {
+        "category": "photos",
+        "subcategory": "lights",
+        "src": "/gallery/photos/lights/LIGHTS 03.jpg",
+        "alt": "LIGHTS 03"
+    },
+    {
+        "category": "photos",
+        "subcategory": "lights",
+        "src": "/gallery/photos/lights/LIGHTS 04.jpg",
+        "alt": "LIGHTS 04"
+    },
+    {
+        "category": "photos",
+        "subcategory": "lights",
+        "src": "/gallery/photos/lights/LIGHTS 07.jpg",
+        "alt": "LIGHTS 07"
+    },
+    {
+        "category": "photos",
+        "subcategory": "lights",
+        "src": "/gallery/photos/lights/LIGHTS 08.jpg",
+        "alt": "LIGHTS 08"
+    },
+    {
+        "category": "photos",
+        "subcategory": "lights",
+        "src": "/gallery/photos/lights/LIGHTS 14.jpg",
+        "alt": "LIGHTS 14"
+    },
+    {
+        "category": "photos",
+        "subcategory": "lights",
+        "src": "/gallery/photos/lights/LIGHTS 16.jpg",
+        "alt": "LIGHTS 16"
+    },
+    {
+        "category": "photos",
+        "subcategory": "lights",
+        "src": "/gallery/photos/lights/LIGHTS 18.jpg",
+        "alt": "LIGHTS 18"
+    },
+    {
+        "category": "photos",
+        "subcategory": "lights",
+        "src": "/gallery/photos/lights/LIGHTS 24.jpg",
+        "alt": "LIGHTS 24"
+    },
+    {
+        "category": "photos",
+        "subcategory": "portraits",
+        "src": "/gallery/photos/portraits/port00001.jpg",
+        "alt": "port00001"
+    },
+    {
+        "category": "photos",
+        "subcategory": "portraits",
+        "src": "/gallery/photos/portraits/port00002.jpg",
+        "alt": "port00002"
+    },
+    {
+        "category": "photos",
+        "subcategory": "portraits",
+        "src": "/gallery/photos/portraits/port00003.jpg",
+        "alt": "port00003"
+    },
+    {
+        "category": "photos",
+        "subcategory": "portraits",
+        "src": "/gallery/photos/portraits/port00004.jpg",
+        "alt": "port00004"
+    },
+    {
+        "category": "photos",
+        "subcategory": "portraits",
+        "src": "/gallery/photos/portraits/port00005.jpg",
+        "alt": "port00005"
+    },
+    {
+        "category": "photos",
+        "subcategory": "portraits",
+        "src": "/gallery/photos/portraits/port00006.jpg",
+        "alt": "port00006"
+    },
+    {
+        "category": "photos",
+        "subcategory": "portraits",
+        "src": "/gallery/photos/portraits/port00007.jpg",
+        "alt": "port00007"
+    },
+    {
+        "category": "photos",
+        "subcategory": "portraits",
+        "src": "/gallery/photos/portraits/port00008.jpg",
+        "alt": "port00008"
+    },
+    {
+        "category": "photos",
+        "subcategory": "portraits",
+        "src": "/gallery/photos/portraits/port00009.jpg",
+        "alt": "port00009"
+    },
+    {
+        "category": "photos",
+        "subcategory": "portraits",
+        "src": "/gallery/photos/portraits/port00010.jpg",
+        "alt": "port00010"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "mixed_media",
+        "src": "/gallery/drawings/mixed_media/2color.jpg",
+        "alt": "2color"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "mixed_media",
+        "src": "/gallery/drawings/mixed_media/Layer 12.jpg",
+        "alt": "Layer 12"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "mixed_media",
+        "src": "/gallery/drawings/mixed_media/Layer 14.jpg",
+        "alt": "Layer 14"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "mixed_media",
+        "src": "/gallery/drawings/mixed_media/Layer 20.jpg",
+        "alt": "Layer 20"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "mixed_media",
+        "src": "/gallery/drawings/mixed_media/Layer 21.jpg",
+        "alt": "Layer 21"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "mixed_media",
+        "src": "/gallery/drawings/mixed_media/smoke 3.jpg",
+        "alt": "smoke 3"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "mixed_media",
+        "src": "/gallery/drawings/mixed_media/smoke experiment 1.jpg",
+        "alt": "smoke experiment 1"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "mixed_media",
+        "src": "/gallery/drawings/mixed_media/smoke successpsd.jpg",
+        "alt": "smoke successpsd"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "mixed_media",
+        "src": "/gallery/drawings/mixed_media/smoke5.jpg",
+        "alt": "smoke5"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "mixed_media",
+        "src": "/gallery/drawings/mixed_media/ssm0oke.jpg",
+        "alt": "ssm0oke"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "mixed_media",
+        "src": "/gallery/drawings/mixed_media/Untitled-4.jpg",
+        "alt": "Untitled 4"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "quilt",
+        "src": "/gallery/drawings/quilt/black and white 2x3.jpg",
+        "alt": "black and white 2x3"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "quilt",
+        "src": "/gallery/drawings/quilt/WHITE 2x3-Recovered.jpg",
+        "alt": "WHITE 2x3 Recovered"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "quilt",
+        "src": "/gallery/drawings/quilt/WHITE 2x3-Recovered_1.jpg",
+        "alt": "WHITE 2x3 Recovered 1"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/larger_drawings/Large_drawings00001.jpg",
+        "alt": "Large drawings00001",
+        "subsubcategory": "larger_drawings"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/larger_drawings/Large_drawings00002.jpg",
+        "alt": "Large drawings00002",
+        "subsubcategory": "larger_drawings"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/larger_drawings/Large_drawings00003.jpg",
+        "alt": "Large drawings00003",
+        "subsubcategory": "larger_drawings"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/larger_drawings/Large_drawings00004.jpg",
+        "alt": "Large drawings00004",
+        "subsubcategory": "larger_drawings"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/larger_drawings/Large_drawings00005.jpg",
+        "alt": "Large drawings00005",
+        "subsubcategory": "larger_drawings"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/larger_drawings/Large_drawings00006.jpg",
+        "alt": "Large drawings00006",
+        "subsubcategory": "larger_drawings"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/larger_drawings/Large_drawings00007.jpg",
+        "alt": "Large drawings00007",
+        "subsubcategory": "larger_drawings"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/11_2500001.jpg",
+        "alt": "11 2500001",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/11_2500002.jpg",
+        "alt": "11 2500002",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/12_25_00001.jpg",
+        "alt": "12 25 00001",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/12_25_00002.jpg",
+        "alt": "12 25 00002",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/12_25_00003.jpg",
+        "alt": "12 25 00003",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/2023_spec.jpg",
+        "alt": "2023 spec",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/fall_2200001.jpg",
+        "alt": "fall 2200001",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/fall_2200002.jpg",
+        "alt": "fall 2200002",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/fall_2200003.jpg",
+        "alt": "fall 2200003",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/fall_2200004.jpg",
+        "alt": "fall 2200004",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/fall_2200005.jpg",
+        "alt": "fall 2200005",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/fall_2200006.jpg",
+        "alt": "fall 2200006",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/fall_2200007.jpg",
+        "alt": "fall 2200007",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/fall_2200008.jpg",
+        "alt": "fall 2200008",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/fall_2200009.jpg",
+        "alt": "fall 2200009",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/fall_2200010.jpg",
+        "alt": "fall 2200010",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/fall_2200011.jpg",
+        "alt": "fall 2200011",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/fall_2200012.jpg",
+        "alt": "fall 2200012",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/fall_2200013.jpg",
+        "alt": "fall 2200013",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/fall_2200014.jpg",
+        "alt": "fall 2200014",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/fall_2200015.jpg",
+        "alt": "fall 2200015",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/fall_2200016.jpg",
+        "alt": "fall 2200016",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/fall_2200017.jpg",
+        "alt": "fall 2200017",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/fall_2200018.jpg",
+        "alt": "fall 2200018",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/fall_2200019.jpg",
+        "alt": "fall 2200019",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/fall_2200020.jpg",
+        "alt": "fall 2200020",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/fall_2200021.jpg",
+        "alt": "fall 2200021",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/fall_2200022.jpg",
+        "alt": "fall 2200022",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/fall_2200023.jpg",
+        "alt": "fall 2200023",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/2_2200001.jpg",
+        "alt": "2 2200001",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/2_2200002.jpg",
+        "alt": "2 2200002",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/2_2600001.jpg",
+        "alt": "2 2600001",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/2_2600002.jpg",
+        "alt": "2 2600002",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/2_2600003.jpg",
+        "alt": "2 2600003",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/2_2600004.jpg",
+        "alt": "2 2600004",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/2_2600005.jpg",
+        "alt": "2 2600005",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/3_2500001.png",
+        "alt": "3 2500001",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/3_2500002.png",
+        "alt": "3 2500002",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/3_2500003.png",
+        "alt": "3 2500003",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/3_2500004.png",
+        "alt": "3 2500004",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/3_2600001.jpg",
+        "alt": "3 2600001",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/3_2600002.jpg",
+        "alt": "3 2600002",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/3_2600003.jpg",
+        "alt": "3 2600003",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/4_24_00001.jpg",
+        "alt": "4 24 00001",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/4_24_00002.jpg",
+        "alt": "4 24 00002",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/4_24_00003.jpg",
+        "alt": "4 24 00003",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/5_2400001.jpg",
+        "alt": "5 2400001",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/5_2400002.jpg",
+        "alt": "5 2400002",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/5_2400003.jpg",
+        "alt": "5 2400003",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/5_2400004.jpg",
+        "alt": "5 2400004",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/5_2400005.jpg",
+        "alt": "5 2400005",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/5_2400006.jpg",
+        "alt": "5 2400006",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/5_2400007.jpg",
+        "alt": "5 2400007",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/5_2400008.jpg",
+        "alt": "5 2400008",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/6_2400001.jpg",
+        "alt": "6 2400001",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/6_2400002.jpg",
+        "alt": "6 2400002",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/6_2400003.jpg",
+        "alt": "6 2400003",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/6_2400004.jpg",
+        "alt": "6 2400004",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/7_2024_00001.jpg",
+        "alt": "7 2024 00001",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/7_2024_00002.jpg",
+        "alt": "7 2024 00002",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/7_2024_00003.jpg",
+        "alt": "7 2024 00003",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/7_2500001.jpg",
+        "alt": "7 2500001",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/7_2500002.jpg",
+        "alt": "7 2500002",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/7_2500003.jpg",
+        "alt": "7 2500003",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/7_2500004.jpg",
+        "alt": "7 2500004",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/8_2024_00001.jpg",
+        "alt": "8 2024 00001",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/8_2024_00002.jpg",
+        "alt": "8 2024 00002",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/8_2024_00003.jpg",
+        "alt": "8 2024 00003",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/8_2024_00004.jpg",
+        "alt": "8 2024 00004",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/8_2024_00005.jpg",
+        "alt": "8 2024 00005",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/8_2024_00006.jpg",
+        "alt": "8 2024 00006",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/8_2024_00007.jpg",
+        "alt": "8 2024 00007",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/2 railways.jpg",
+        "alt": "2 railways",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/3d attempt.jpg",
+        "alt": "3d attempt",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/animals trees circles feeding .jpg",
+        "alt": "animals trees circles feeding",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/audit.jpg",
+        "alt": "audit",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/avoidant figures.jpg",
+        "alt": "avoidant figures",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/classsroom.jpg",
+        "alt": "classsroom",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/complicating.jpg",
+        "alt": "complicating",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/contradictory roadmap.jpg",
+        "alt": "contradictory roadmap",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/cranes.jpg",
+        "alt": "cranes",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/developing cityscape.jpg",
+        "alt": "developing cityscape",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/domestic possession and the methods of ejection.jpg",
+        "alt": "domestic possession and the methods of ejection",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/drowning voices.jpg",
+        "alt": "drowning voices",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/entries and methods.jpg",
+        "alt": "entries and methods",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/eyelines_landing.jpg",
+        "alt": "eyelines landing",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/fish, organs, functional arrangement.jpg",
+        "alt": "fish, organs, functional arrangement",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/Flagpoles, roadways, cities, routes.jpg",
+        "alt": "Flagpoles, roadways, cities, routes",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/flower charting.jpg",
+        "alt": "flower charting",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/footwork.jpg",
+        "alt": "footwork",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/guilty figures.jpg",
+        "alt": "guilty figures",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/hunched and corpulent fugures.jpg",
+        "alt": "hunched and corpulent fugures",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/interfacing.jpg",
+        "alt": "interfacing",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/kite and pit.jpg",
+        "alt": "kite and pit",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/Layer 12.jpg",
+        "alt": "Layer 12",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/Layer 15.jpg",
+        "alt": "Layer 15",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/Layer 28.jpg",
+        "alt": "Layer 28",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/Layer 30.jpg",
+        "alt": "Layer 30",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/Layer 33.jpg",
+        "alt": "Layer 33",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/Layer 4.jpg",
+        "alt": "Layer 4",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/Layer 41.jpg",
+        "alt": "Layer 41",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/Layer 42.jpg",
+        "alt": "Layer 42",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/Layer 43.jpg",
+        "alt": "Layer 43",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/Layer 44.jpg",
+        "alt": "Layer 44",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/Layer 45.jpg",
+        "alt": "Layer 45",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/Layer 46.jpg",
+        "alt": "Layer 46",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/Layer 47.jpg",
+        "alt": "Layer 47",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/lean.jpg",
+        "alt": "lean",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/lesson.jpg",
+        "alt": "lesson",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/Letters_.jpg",
+        "alt": "Letters",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/mapping functions.jpg",
+        "alt": "mapping functions",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/motions shaky.jpg",
+        "alt": "motions shaky",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/Navigables spaced .jpg",
+        "alt": "Navigables spaced",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/oversite hangar journey desert satelite.jpg",
+        "alt": "oversite hangar journey desert satelite",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/Personality, spills, location divining.jpg",
+        "alt": "Personality, spills, location divining",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/races.jpg",
+        "alt": "races",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/restaurant confrontation.jpg",
+        "alt": "restaurant confrontation",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/rollercoasters.jpg",
+        "alt": "rollercoasters",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/sample size pop.jpg",
+        "alt": "sample size pop",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/seating arrangements and staging layout.jpg",
+        "alt": "seating arrangements and staging layout",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/sibling.jpg",
+        "alt": "sibling",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/slippy step;drunken express.jpg",
+        "alt": "slippy step drunken express",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/specified task and gear.jpg",
+        "alt": "specified task and gear",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/Spillsandcircumstance2.jpg",
+        "alt": "Spillsandcircumstance2",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/streetlights and railing.jpg",
+        "alt": "streetlights and railing",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/stretching and cracking.jpg",
+        "alt": "stretching and cracking",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/structuing.jpg",
+        "alt": "structuing",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/tower array signal circuitry.jpg",
+        "alt": "tower array signal circuitry",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/travel narrative.jpg",
+        "alt": "travel narrative",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/turret;locus;waypoint; compass.jpg",
+        "alt": "turret locus waypoint compass",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/two types.jpg",
+        "alt": "two types",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/waiting notice.jpg",
+        "alt": "waiting notice",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/when to start.jpg",
+        "alt": "when to start",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/worldbuilding.jpg",
+        "alt": "worldbuilding",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/larger_drawings/larger drawings_Large_drawings00001.jpg",
+        "alt": "larger drawings Large drawings00001",
+        "subsubcategory": "larger_drawings"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/larger_drawings/larger drawings_Large_drawings00002.jpg",
+        "alt": "larger drawings Large drawings00002",
+        "subsubcategory": "larger_drawings"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/larger_drawings/larger drawings_Large_drawings00003.jpg",
+        "alt": "larger drawings Large drawings00003",
+        "subsubcategory": "larger_drawings"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/larger_drawings/larger drawings_Large_drawings00004.jpg",
+        "alt": "larger drawings Large drawings00004",
+        "subsubcategory": "larger_drawings"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/larger_drawings/larger drawings_Large_drawings00005.jpg",
+        "alt": "larger drawings Large drawings00005",
+        "subsubcategory": "larger_drawings"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/larger_drawings/larger drawings_Large_drawings00006.jpg",
+        "alt": "larger drawings Large drawings00006",
+        "subsubcategory": "larger_drawings"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/larger_drawings/larger drawings_Large_drawings00007.jpg",
+        "alt": "larger drawings Large drawings00007",
+        "subsubcategory": "larger_drawings"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/11_25_11_2500001.jpg",
+        "alt": "11 25 11 2500001",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/11_25_11_2500002.jpg",
+        "alt": "11 25 11 2500002",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/12_25_12_25_00001.jpg",
+        "alt": "12 25 12 25 00001",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/12_25_12_25_00002.jpg",
+        "alt": "12 25 12 25 00002",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/12_25_12_25_00003.jpg",
+        "alt": "12 25 12 25 00003",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/22_23_2023_spec.jpg",
+        "alt": "22 23 2023 spec",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/22_23_fall_2200001.jpg",
+        "alt": "22 23 fall 2200001",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/22_23_fall_2200002.jpg",
+        "alt": "22 23 fall 2200002",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/22_23_fall_2200003.jpg",
+        "alt": "22 23 fall 2200003",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/22_23_fall_2200004.jpg",
+        "alt": "22 23 fall 2200004",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/22_23_fall_2200005.jpg",
+        "alt": "22 23 fall 2200005",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/22_23_fall_2200006.jpg",
+        "alt": "22 23 fall 2200006",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/22_23_fall_2200007.jpg",
+        "alt": "22 23 fall 2200007",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/22_23_fall_2200008.jpg",
+        "alt": "22 23 fall 2200008",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/22_23_fall_2200009.jpg",
+        "alt": "22 23 fall 2200009",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/22_23_fall_2200010.jpg",
+        "alt": "22 23 fall 2200010",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/22_23_fall_2200011.jpg",
+        "alt": "22 23 fall 2200011",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/22_23_fall_2200012.jpg",
+        "alt": "22 23 fall 2200012",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/22_23_fall_2200013.jpg",
+        "alt": "22 23 fall 2200013",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/22_23_fall_2200014.jpg",
+        "alt": "22 23 fall 2200014",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/22_23_fall_2200015.jpg",
+        "alt": "22 23 fall 2200015",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/22_23_fall_2200016.jpg",
+        "alt": "22 23 fall 2200016",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/22_23_fall_2200017.jpg",
+        "alt": "22 23 fall 2200017",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/22_23_fall_2200018.jpg",
+        "alt": "22 23 fall 2200018",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/22_23_fall_2200019.jpg",
+        "alt": "22 23 fall 2200019",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/22_23_fall_2200020.jpg",
+        "alt": "22 23 fall 2200020",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/22_23_fall_2200021.jpg",
+        "alt": "22 23 fall 2200021",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/22_23_fall_2200022.jpg",
+        "alt": "22 23 fall 2200022",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/22_23_fall_2200023.jpg",
+        "alt": "22 23 fall 2200023",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/2_22_2_2200001.jpg",
+        "alt": "2 22 2 2200001",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/2_22_2_2200002.jpg",
+        "alt": "2 22 2 2200002",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/2_26_2_2600001.jpg",
+        "alt": "2 26 2 2600001",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/2_26_2_2600002.jpg",
+        "alt": "2 26 2 2600002",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/2_26_2_2600003.jpg",
+        "alt": "2 26 2 2600003",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/2_26_2_2600004.jpg",
+        "alt": "2 26 2 2600004",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/2_26_2_2600005.jpg",
+        "alt": "2 26 2 2600005",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/3_25_3_2500001.png",
+        "alt": "3 25 3 2500001",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/3_25_3_2500002.png",
+        "alt": "3 25 3 2500002",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/3_25_3_2500003.png",
+        "alt": "3 25 3 2500003",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/3_25_3_2500004.png",
+        "alt": "3 25 3 2500004",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/3_26_3_2600001.jpg",
+        "alt": "3 26 3 2600001",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/3_26_3_2600002.jpg",
+        "alt": "3 26 3 2600002",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/3_26_3_2600003.jpg",
+        "alt": "3 26 3 2600003",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/4_24_4_24_00001.jpg",
+        "alt": "4 24 4 24 00001",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/4_24_4_24_00002.jpg",
+        "alt": "4 24 4 24 00002",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/4_24_4_24_00003.jpg",
+        "alt": "4 24 4 24 00003",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/5_24_5_2400001.jpg",
+        "alt": "5 24 5 2400001",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/5_24_5_2400002.jpg",
+        "alt": "5 24 5 2400002",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/5_24_5_2400003.jpg",
+        "alt": "5 24 5 2400003",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/5_24_5_2400004.jpg",
+        "alt": "5 24 5 2400004",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/5_24_5_2400005.jpg",
+        "alt": "5 24 5 2400005",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/5_24_5_2400006.jpg",
+        "alt": "5 24 5 2400006",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/5_24_5_2400007.jpg",
+        "alt": "5 24 5 2400007",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/5_24_5_2400008.jpg",
+        "alt": "5 24 5 2400008",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/6_24_6_2400001.jpg",
+        "alt": "6 24 6 2400001",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/6_24_6_2400002.jpg",
+        "alt": "6 24 6 2400002",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/6_24_6_2400003.jpg",
+        "alt": "6 24 6 2400003",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/6_24_6_2400004.jpg",
+        "alt": "6 24 6 2400004",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/7_24_7_2024_00001.jpg",
+        "alt": "7 24 7 2024 00001",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/7_24_7_2024_00002.jpg",
+        "alt": "7 24 7 2024 00002",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/7_24_7_2024_00003.jpg",
+        "alt": "7 24 7 2024 00003",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/7_25_7_2500001.jpg",
+        "alt": "7 25 7 2500001",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/7_25_7_2500002.jpg",
+        "alt": "7 25 7 2500002",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/7_25_7_2500003.jpg",
+        "alt": "7 25 7 2500003",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/7_25_7_2500004.jpg",
+        "alt": "7 25 7 2500004",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/8_24_8_2024_00001.jpg",
+        "alt": "8 24 8 2024 00001",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/8_24_8_2024_00002.jpg",
+        "alt": "8 24 8 2024 00002",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/8_24_8_2024_00003.jpg",
+        "alt": "8 24 8 2024 00003",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/8_24_8_2024_00004.jpg",
+        "alt": "8 24 8 2024 00004",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/8_24_8_2024_00005.jpg",
+        "alt": "8 24 8 2024 00005",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/8_24_8_2024_00006.jpg",
+        "alt": "8 24 8 2024 00006",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_by_month/8_24_8_2024_00007.jpg",
+        "alt": "8 24 8 2024 00007",
+        "subsubcategory": "micros_by_month"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_2 railways.jpg",
+        "alt": "micros (grouping) 2 railways",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_3d attempt.jpg",
+        "alt": "micros (grouping) 3d attempt",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_animals trees circles feeding .jpg",
+        "alt": "micros (grouping) animals trees circles feeding",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_audit.jpg",
+        "alt": "micros (grouping) audit",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_avoidant figures.jpg",
+        "alt": "micros (grouping) avoidant figures",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_classsroom.jpg",
+        "alt": "micros (grouping) classsroom",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_complicating.jpg",
+        "alt": "micros (grouping) complicating",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_contradictory roadmap.jpg",
+        "alt": "micros (grouping) contradictory roadmap",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_cranes.jpg",
+        "alt": "micros (grouping) cranes",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_developing cityscape.jpg",
+        "alt": "micros (grouping) developing cityscape",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_domestic possession and the methods of ejection.jpg",
+        "alt": "micros (grouping) domestic possession and the methods of ejection",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_drowning voices.jpg",
+        "alt": "micros (grouping) drowning voices",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_entries and methods.jpg",
+        "alt": "micros (grouping) entries and methods",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_eyelines_landing.jpg",
+        "alt": "micros (grouping) eyelines landing",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_fish, organs, functional arrangement.jpg",
+        "alt": "micros (grouping) fish, organs, functional arrangement",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_Flagpoles, roadways, cities, routes.jpg",
+        "alt": "micros (grouping) Flagpoles, roadways, cities, routes",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_flower charting.jpg",
+        "alt": "micros (grouping) flower charting",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_footwork.jpg",
+        "alt": "micros (grouping) footwork",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_guilty figures.jpg",
+        "alt": "micros (grouping) guilty figures",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_hunched and corpulent fugures.jpg",
+        "alt": "micros (grouping) hunched and corpulent fugures",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_interfacing.jpg",
+        "alt": "micros (grouping) interfacing",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_kite and pit.jpg",
+        "alt": "micros (grouping) kite and pit",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_Layer 12.jpg",
+        "alt": "micros (grouping) Layer 12",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_Layer 15.jpg",
+        "alt": "micros (grouping) Layer 15",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_Layer 28.jpg",
+        "alt": "micros (grouping) Layer 28",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_Layer 30.jpg",
+        "alt": "micros (grouping) Layer 30",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_Layer 33.jpg",
+        "alt": "micros (grouping) Layer 33",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_Layer 4.jpg",
+        "alt": "micros (grouping) Layer 4",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_Layer 41.jpg",
+        "alt": "micros (grouping) Layer 41",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_Layer 42.jpg",
+        "alt": "micros (grouping) Layer 42",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_Layer 43.jpg",
+        "alt": "micros (grouping) Layer 43",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_Layer 44.jpg",
+        "alt": "micros (grouping) Layer 44",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_Layer 45.jpg",
+        "alt": "micros (grouping) Layer 45",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_Layer 46.jpg",
+        "alt": "micros (grouping) Layer 46",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_Layer 47.jpg",
+        "alt": "micros (grouping) Layer 47",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_lean.jpg",
+        "alt": "micros (grouping) lean",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_lesson.jpg",
+        "alt": "micros (grouping) lesson",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_Letters_.jpg",
+        "alt": "micros (grouping) Letters",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_mapping functions.jpg",
+        "alt": "micros (grouping) mapping functions",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_motions shaky.jpg",
+        "alt": "micros (grouping) motions shaky",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_Navigables spaced .jpg",
+        "alt": "micros (grouping) Navigables spaced",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_oversite hangar journey desert satelite.jpg",
+        "alt": "micros (grouping) oversite hangar journey desert satelite",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_Personality, spills, location divining.jpg",
+        "alt": "micros (grouping) Personality, spills, location divining",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_races.jpg",
+        "alt": "micros (grouping) races",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_restaurant confrontation.jpg",
+        "alt": "micros (grouping) restaurant confrontation",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_rollercoasters.jpg",
+        "alt": "micros (grouping) rollercoasters",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_sample size pop.jpg",
+        "alt": "micros (grouping) sample size pop",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_seating arrangements and staging layout.jpg",
+        "alt": "micros (grouping) seating arrangements and staging layout",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_sibling.jpg",
+        "alt": "micros (grouping) sibling",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_slippy step;drunken express.jpg",
+        "alt": "micros (grouping) slippy step drunken express",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_specified task and gear.jpg",
+        "alt": "micros (grouping) specified task and gear",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_Spillsandcircumstance2.jpg",
+        "alt": "micros (grouping) Spillsandcircumstance2",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_streetlights and railing.jpg",
+        "alt": "micros (grouping) streetlights and railing",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_stretching and cracking.jpg",
+        "alt": "micros (grouping) stretching and cracking",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_structuing.jpg",
+        "alt": "micros (grouping) structuing",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_tower array signal circuitry.jpg",
+        "alt": "micros (grouping) tower array signal circuitry",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_travel narrative.jpg",
+        "alt": "micros (grouping) travel narrative",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_turret;locus;waypoint; compass.jpg",
+        "alt": "micros (grouping) turret locus waypoint compass",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_two types.jpg",
+        "alt": "micros (grouping) two types",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_waiting notice.jpg",
+        "alt": "micros (grouping) waiting notice",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_when to start.jpg",
+        "alt": "micros (grouping) when to start",
+        "subsubcategory": "micros_grouping"
+    },
+    {
+        "category": "drawings",
+        "subcategory": "pen_and_paper",
+        "src": "/gallery/drawings/pen_and_paper/micros_grouping/micros (grouping)_worldbuilding.jpg",
+        "alt": "micros (grouping) worldbuilding",
+        "subsubcategory": "micros_grouping"
     }
 ]
-

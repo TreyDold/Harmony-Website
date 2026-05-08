@@ -1,172 +1,190 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import images from "@/data/images.json";
+import imagesData from "@/data/images.json";
 
 type Img = { src: string; alt: string; category: string; subcategory: string };
 
-// Helper function to convert old paths to optimized paths
 const getOptimizedImagePath = (oldSrc: string) => {
   const cleanPath = oldSrc
     .replace('/gallery/', '')
     .replace(/\.(jpg|jpeg|png|webp)$/i, '');
-  
   return `/images/optimized/large/${cleanPath}.webp`;
 };
 
-export default function RotatingHero({
-  intervalMs = 8000,
-  pick = 50,
-}: {
-  intervalMs?: number;
-  pick?: number;
-}) {
-  const [mounted, setMounted] = useState(false);
-  const [pool, setPool] = useState<Img[]>([]);
-  const [idx, setIdx] = useState(0);
-  const [mouseX, setMouseX] = useState<number | null>(null);
-  const [windowWidth, setWindowWidth] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const touchStartX = useRef<number | null>(null);
+const ALL_IMAGES = imagesData as Array<Img & { subsubcategory?: string }>;
 
-  // Only shuffle images after component mounts on client
+export default function RotatingHero({ intervalMs = 8000 }: { intervalMs?: number }) {
+  const [mounted, setMounted]         = useState(false);
+  const [pool, setPool]               = useState<Img[]>([]);
+  const [idx, setIdx]                 = useState(0);
+  const [mouseX, setMouseX]           = useState<number | null>(null);
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  // Two image slots — only one is visible at a time, they crossfade between each other.
+  // The inactive slot is preloaded with the next image while hidden (no visual glitch).
+  const [slotA, setSlotA]           = useState('');
+  const [slotB, setSlotB]           = useState('');
+  const [activeSlot, setActiveSlot] = useState<'A' | 'B'>('A');
+
+  const touchStartX  = useRef<number | null>(null);
+  const intervalRef  = useRef<ReturnType<typeof setInterval> | null>(null);
+  const poolLengthRef = useRef(0);
+
+  // Shuffle on mount
   useEffect(() => {
-    const allowed = images as Img[];
-    
-    // Truly random shuffle
-    const arr = [...allowed];
+    const arr = [...ALL_IMAGES];
     for (let i = arr.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [arr[i], arr[j]] = [arr[j], arr[i]];
     }
-    
-    setPool(arr.slice(0, Math.max(1, Math.min(pick, arr.length))));
+    poolLengthRef.current = arr.length;
+    setPool(arr);
     setMounted(true);
-  }, [pick]);
+  }, []);
+
+  // Initialise slots once pool is ready
+  useEffect(() => {
+    if (pool.length === 0) return;
+    setSlotA(getOptimizedImagePath(pool[0].src));
+    setSlotB(pool.length > 1 ? getOptimizedImagePath(pool[1].src) : '');
+    setActiveSlot('A');
+  }, [pool]);
+
+  // After each index/slot change, preload the next-next image into the now-inactive slot.
+  // Since the inactive slot is at opacity-0, updating its src causes no visual flicker.
+  useEffect(() => {
+    if (pool.length < 2) return;
+    const preloadSrc = getOptimizedImagePath(pool[(idx + 1) % pool.length].src);
+    if (activeSlot === 'A') {
+      setSlotB(preloadSrc);
+    } else {
+      setSlotA(preloadSrc);
+    }
+  }, [idx, activeSlot, pool]);
+
+  const advance = useCallback(() => {
+    setIdx(i => (i + 1) % poolLengthRef.current);
+    setActiveSlot(s => s === 'A' ? 'B' : 'A');
+  }, []);
+
+  const retreat = useCallback(() => {
+    setIdx(i => (i - 1 + poolLengthRef.current) % poolLengthRef.current);
+    setActiveSlot(s => s === 'A' ? 'B' : 'A');
+  }, []);
+
+  const startInterval = useCallback(() => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(advance, intervalMs);
+  }, [advance, intervalMs]);
 
   useEffect(() => {
     if (pool.length < 2) return;
-    const t = setInterval(() => setIdx((i) => (i + 1) % pool.length), intervalMs);
-    return () => clearInterval(t);
-  }, [pool.length, intervalMs]);
+    startInterval();
+    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
+  }, [pool.length, startInterval]);
 
+  // Mouse tracking
   useEffect(() => {
-    const updateWidth = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
+    const updateWidth = () => setWindowWidth(window.innerWidth);
     updateWidth();
-
-    const handleMouseMove = (e: MouseEvent) => {
-      setMouseX(e.clientX);
-    };
-
-    const handleMouseLeave = () => {
-      setMouseX(null);
-    };
-
-    const handleResize = () => {
-      updateWidth();
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseleave', handleMouseLeave);
-    window.addEventListener('resize', handleResize);
-
+    const onMouseMove  = (e: MouseEvent) => setMouseX(e.clientX);
+    const onMouseLeave = () => setMouseX(null);
+    window.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mouseleave', onMouseLeave);
+    window.addEventListener('resize', updateWidth);
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseleave', handleMouseLeave);
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('mousemove', onMouseMove);
+      document.removeEventListener('mouseleave', onMouseLeave);
+      window.removeEventListener('resize', updateWidth);
     };
   }, []);
 
-  const goToPrevious = () => {
-    setIdx((i) => (i - 1 + pool.length) % pool.length);
+  const navigate = (direction: 'prev' | 'next') => {
+    direction === 'prev' ? retreat() : advance();
+    startInterval(); // reset timer on manual nav
   };
 
-  const goToNext = () => {
-    setIdx((i) => (i + 1) % pool.length);
-  };
-
-  // Touch swipe handlers
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
   };
-
   const handleTouchEnd = (e: React.TouchEvent) => {
     if (touchStartX.current === null) return;
     const diff = touchStartX.current - e.changedTouches[0].clientX;
-    const threshold = 50; // minimum swipe distance in px
-    if (diff > threshold) {
-      goToNext();
-    } else if (diff < -threshold) {
-      goToPrevious();
-    }
+    if (Math.abs(diff) > 50) navigate(diff > 0 ? 'next' : 'prev');
     touchStartX.current = null;
   };
 
-  // Determine which side of the screen the cursor is on
-  const isLeftSide = mouseX !== null && windowWidth > 0 && mouseX < windowWidth / 2;
+  const isLeftSide  = mouseX !== null && windowWidth > 0 && mouseX < windowWidth / 2;
   const isRightSide = mouseX !== null && windowWidth > 0 && mouseX >= windowWidth / 2;
 
-  // Don't render anything until mounted on client
-  if (!mounted) {
+  if (!mounted || pool.length === 0) {
     return <div className="relative h-screen w-full overflow-hidden bg-black" />;
   }
 
   return (
-    <div
-      ref={containerRef}
-      className="relative h-screen w-full overflow-hidden bg-black"
-    >
-      {pool.map((it, i) => {
-        const showing = i === idx;
-        return (
-          <Image
-            key={it.src}
-            src={getOptimizedImagePath(it.src)}
-            alt={it.alt}
-            fill
-            priority={i === 0}
-            className={`object-cover transition-all duration-[2000ms] ease-in-out will-change-opacity ${
-              showing ? "opacity-100 scale-100" : "opacity-0 scale-105"
-            }`}
-            sizes="100vw"
-          />
-        );
-      })}
-      
-      {/* Subtle vignette effect */}
+    <div className="relative h-screen w-full overflow-hidden bg-black">
+      {/* Slot A */}
+      {slotA && (
+        <Image
+          src={slotA}
+          alt=""
+          fill
+          priority={activeSlot === 'A'}
+          className={`object-cover transition-opacity duration-[4000ms] ease-in-out ${
+            activeSlot === 'A' ? 'opacity-100' : 'opacity-0'
+          }`}
+          sizes="100vw"
+        />
+      )}
+
+      {/* Slot B */}
+      {slotB && (
+        <Image
+          src={slotB}
+          alt=""
+          fill
+          priority={activeSlot === 'B'}
+          className={`object-cover transition-opacity duration-[4000ms] ease-in-out ${
+            activeSlot === 'B' ? 'opacity-100' : 'opacity-0'
+          }`}
+          sizes="100vw"
+        />
+      )}
+
+      {/* Vignette */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30" />
       <div className="absolute inset-0 bg-gradient-to-r from-black/5 via-transparent to-black/5" />
 
-      {/* Transparent touch layer — captures swipe on mobile */}
+      {/* Touch layer */}
       <div
         className="absolute inset-0 z-40 sm:pointer-events-none"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       />
 
-      {/* Navigation arrows — hidden on mobile (sm:block), cursor-based on desktop */}
+      {/* Counter */}
+      {pool.length > 1 && (
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-50 text-white/60 text-xs tracking-widest">
+          {idx + 1} / {pool.length}
+        </div>
+      )}
+
+      {/* Nav arrows */}
       {pool.length > 1 && (
         <>
           <button
-            onClick={goToPrevious}
-            className={`absolute left-8 top-1/2 -translate-y-1/2 z-50 bg-black/70 hover:bg-black/90 text-white p-4 rounded-full transition-all duration-300 cursor-pointer hidden sm:block ${
-              isLeftSide ? 'sm:opacity-100' : 'sm:opacity-0'
-            }`}
+            onClick={() => navigate('prev')}
+            className={`absolute left-8 top-1/2 -translate-y-1/2 z-50 bg-black/70 hover:bg-black/90 text-white p-4 rounded-full transition-all duration-300 cursor-pointer hidden sm:block ${isLeftSide ? 'sm:opacity-100' : 'sm:opacity-0'}`}
             aria-label="Previous image"
           >
             <ChevronLeft className="w-8 h-8" />
           </button>
-
           <button
-            onClick={goToNext}
-            className={`absolute right-8 top-1/2 -translate-y-1/2 z-50 bg-black/70 hover:bg-black/90 text-white p-4 rounded-full transition-all duration-300 cursor-pointer hidden sm:block ${
-              isRightSide ? 'sm:opacity-100' : 'sm:opacity-0'
-            }`}
+            onClick={() => navigate('next')}
+            className={`absolute right-8 top-1/2 -translate-y-1/2 z-50 bg-black/70 hover:bg-black/90 text-white p-4 rounded-full transition-all duration-300 cursor-pointer hidden sm:block ${isRightSide ? 'sm:opacity-100' : 'sm:opacity-0'}`}
             aria-label="Next image"
           >
             <ChevronRight className="w-8 h-8" />

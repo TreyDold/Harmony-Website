@@ -6,7 +6,6 @@ export default function Home() {
       {/* Full-screen rotating hero */}
       <RotatingHero
         intervalMs={8000}  // Slower transitions like James Jean
-        pick={8}
       />
 
       {/* Minimal overlay - just the header handles navigation */}

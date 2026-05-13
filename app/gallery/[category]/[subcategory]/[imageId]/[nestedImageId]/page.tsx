@@ -57,8 +57,8 @@ export default function NestedImageViewerPage({ params }: PageProps) {
 
   const basePath = `/gallery/${category}/${subcategory}/${subsubcategory}`;
 
-  const goToPrevious = () => { if (hasPrevious) router.push(`${basePath}/${currentIndex - 1}`); };
-  const goToNext     = () => { if (hasNext) router.push(`${basePath}/${currentIndex + 1}`); };
+  const goToPrevious = () => { if (hasPrevious) router.replace(`${basePath}/${currentIndex - 1}`); };
+  const goToNext     = () => { if (hasNext) router.replace(`${basePath}/${currentIndex + 1}`); };
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {

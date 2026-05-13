@@ -11,7 +11,7 @@ export default function SiteHeader() {
     return (
       <header className="absolute top-0 left-0 right-0 z-50 w-full">
         <div className="w-full px-4 py-6 max-w-[1920px] mx-auto">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-0">
+          <div className="flex flex-row items-center justify-between">
             {/* Artist name */}
             <Link
               href="/"
@@ -70,7 +70,7 @@ export default function SiteHeader() {
       }}
     >
       <div className="w-full px-4 py-4 max-w-[1920px] mx-auto">
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-0">
+        <div className="flex flex-row items-center justify-between">
           {/* Logo/Name */}
           <Link
             href="/"
@@ -86,7 +86,7 @@ export default function SiteHeader() {
           </Link>
 
           {/* Navigation */}
-          <nav className="flex items-center gap-4 sm:gap-[clamp(16px,3vw,32px)] sm:ml-auto sm:pr-10">
+          <nav className="flex items-center gap-4 sm:gap-[clamp(16px,3vw,32px)] sm:pr-10">
             {navItems.map(({ label, href, active }) => (
               <Link
                 key={href}

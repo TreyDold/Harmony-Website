@@ -234,8 +234,8 @@ function ImageViewer({
   const hasPrevious  = currentIndex > 0;
   const hasNext      = currentIndex < subcategoryImages.length - 1;
 
-  const goToPrevious = () => { if (hasPrevious) router.push(`/gallery/${category}/${subcategory}/${currentIndex - 1}`); };
-  const goToNext     = () => { if (hasNext) router.push(`/gallery/${category}/${subcategory}/${currentIndex + 1}`); };
+  const goToPrevious = () => { if (hasPrevious) router.replace(`/gallery/${category}/${subcategory}/${currentIndex - 1}`); };
+  const goToNext     = () => { if (hasNext) router.replace(`/gallery/${category}/${subcategory}/${currentIndex + 1}`); };
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {

@@ -23,8 +23,6 @@ export default function RotatingHero({ intervalMs = 8000 }: { intervalMs?: numbe
   const [mouseX, setMouseX]           = useState<number | null>(null);
   const [windowWidth, setWindowWidth] = useState(0);
 
-  // Two image slots — only one is visible at a time, they crossfade between each other.
-  // The inactive slot is preloaded with the next image while hidden (no visual glitch).
   const [slotA, setSlotA]           = useState('');
   const [slotB, setSlotB]           = useState('');
   const [activeSlot, setActiveSlot] = useState<'A' | 'B'>('A');
@@ -33,7 +31,6 @@ export default function RotatingHero({ intervalMs = 8000 }: { intervalMs?: numbe
   const intervalRef  = useRef<ReturnType<typeof setInterval> | null>(null);
   const poolLengthRef = useRef(0);
 
-  // Shuffle on mount
   useEffect(() => {
     const arr = [...ALL_IMAGES];
     for (let i = arr.length - 1; i > 0; i--) {
@@ -45,7 +42,6 @@ export default function RotatingHero({ intervalMs = 8000 }: { intervalMs?: numbe
     setMounted(true);
   }, []);
 
-  // Initialise slots once pool is ready
   useEffect(() => {
     if (pool.length === 0) return;
     setSlotA(getOptimizedImagePath(pool[0].src));
@@ -53,16 +49,11 @@ export default function RotatingHero({ intervalMs = 8000 }: { intervalMs?: numbe
     setActiveSlot('A');
   }, [pool]);
 
-  // After each index/slot change, preload the next-next image into the now-inactive slot.
-  // Since the inactive slot is at opacity-0, updating its src causes no visual flicker.
   useEffect(() => {
     if (pool.length < 2) return;
     const preloadSrc = getOptimizedImagePath(pool[(idx + 1) % pool.length].src);
-    if (activeSlot === 'A') {
-      setSlotB(preloadSrc);
-    } else {
-      setSlotA(preloadSrc);
-    }
+    if (activeSlot === 'A') setSlotB(preloadSrc);
+    else setSlotA(preloadSrc);
   }, [idx, activeSlot, pool]);
 
   const advance = useCallback(() => {
@@ -86,7 +77,6 @@ export default function RotatingHero({ intervalMs = 8000 }: { intervalMs?: numbe
     return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
   }, [pool.length, startInterval]);
 
-  // Mouse tracking
   useEffect(() => {
     const updateWidth = () => setWindowWidth(window.innerWidth);
     updateWidth();
@@ -104,11 +94,15 @@ export default function RotatingHero({ intervalMs = 8000 }: { intervalMs?: numbe
 
   const navigate = (direction: 'prev' | 'next') => {
     direction === 'prev' ? retreat() : advance();
-    startInterval(); // reset timer on manual nav
+    startInterval();
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
+  };
+  const handleTouchMove = (e: React.TouchEvent) => {
+    // Prevent browser navigation gesture on horizontal swipe
+    e.preventDefault();
   };
   const handleTouchEnd = (e: React.TouchEvent) => {
     if (touchStartX.current === null) return;
@@ -126,53 +120,45 @@ export default function RotatingHero({ intervalMs = 8000 }: { intervalMs?: numbe
 
   return (
     <div className="relative h-screen w-full overflow-hidden bg-black">
-      {/* Slot A */}
       {slotA && (
         <Image
           src={slotA}
           alt=""
           fill
           priority={activeSlot === 'A'}
-          className={`object-cover transition-opacity duration-[4000ms] ease-in-out ${
-            activeSlot === 'A' ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`object-cover transition-opacity duration-[2000ms] ease-in-out ${activeSlot === 'A' ? 'opacity-100' : 'opacity-0'}`}
           sizes="100vw"
         />
       )}
-
-      {/* Slot B */}
       {slotB && (
         <Image
           src={slotB}
           alt=""
           fill
           priority={activeSlot === 'B'}
-          className={`object-cover transition-opacity duration-[4000ms] ease-in-out ${
-            activeSlot === 'B' ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`object-cover transition-opacity duration-[2000ms] ease-in-out ${activeSlot === 'B' ? 'opacity-100' : 'opacity-0'}`}
           sizes="100vw"
         />
       )}
 
-      {/* Vignette */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30" />
       <div className="absolute inset-0 bg-gradient-to-r from-black/5 via-transparent to-black/5" />
 
-      {/* Touch layer */}
+      {/* Touch layer — touchAction:none prevents Android navigation gesture */}
       <div
         className="absolute inset-0 z-40 sm:pointer-events-none"
+        style={{ touchAction: 'none' }}
         onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       />
 
-      {/* Counter */}
       {pool.length > 1 && (
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-50 text-white/60 text-xs tracking-widest">
           {idx + 1} / {pool.length}
         </div>
       )}
 
-      {/* Nav arrows */}
       {pool.length > 1 && (
         <>
           <button

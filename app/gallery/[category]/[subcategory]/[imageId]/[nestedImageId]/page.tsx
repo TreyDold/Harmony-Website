@@ -4,7 +4,7 @@ import Image from "next/image";
 import { notFound, useRouter } from "next/navigation";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import imagesData from "@/data/images.json";
-import { use, useEffect } from "react";
+import { use, useEffect, useRef } from "react";
 
 type ImageType = {
   category: string;
@@ -20,7 +20,7 @@ interface PageProps {
   params: Promise<{
     category: string;
     subcategory: string;
-    imageId: string;      // acts as subsubcategory at this level
+    imageId: string;
     nestedImageId: string;
   }>;
 }
@@ -34,6 +34,7 @@ const getOptimizedImagePath = (oldSrc: string) => {
 export default function NestedImageViewerPage({ params }: PageProps) {
   const { category, subcategory, imageId: subsubcategory, nestedImageId } = use(params);
   const router = useRouter();
+  const touchStartX = useRef<number | null>(null);
 
   if (!["photos", "drawings"].includes(category)) notFound();
 
@@ -70,9 +71,26 @@ export default function NestedImageViewerPage({ params }: PageProps) {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [hasPrevious, hasNext, currentIndex]);
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const diff = touchStartX.current - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0 && hasNext) goToNext();
+      else if (diff < 0 && hasPrevious) goToPrevious();
+    }
+    touchStartX.current = null;
+  };
+
   return (
-    <div className="fixed inset-0 bg-black z-50 flex flex-col">
-      {/* Top bar */}
+    <div
+      className="fixed inset-0 bg-black z-50 flex flex-col"
+      style={{ touchAction: 'pan-y' }}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
       <div className="flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 shrink-0">
         <div className="text-white text-sm sm:text-base font-medium bg-black/50 px-3 py-1.5 rounded-full">
           {currentIndex + 1} / {subsubcategoryImages.length}
@@ -81,12 +99,11 @@ export default function NestedImageViewerPage({ params }: PageProps) {
           onClick={() => router.back()}
           className="bg-white/10 hover:bg-white/20 text-white p-2 sm:p-2.5 rounded-full transition-all duration-300 cursor-pointer"
           aria-label="Close"
-          >
-            <X className="w-5 h-5 sm:w-6 sm:h-6" />
-          </button>
+        >
+          <X className="w-5 h-5 sm:w-6 sm:h-6" />
+        </button>
       </div>
 
-      {/* Image area */}
       <div className="flex-1 relative min-h-0 px-10 sm:px-16 md:px-20 pb-4 sm:pb-6">
         {hasPrevious && (
           <button

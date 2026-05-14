@@ -31,9 +31,12 @@ const getOptimizedImagePath = (oldSrc: string) => {
     .replace(/\.(jpg|jpeg|png|webp)$/i, '');
 };
 
+const getImageSrc = (src: string, size: 'medium' | 'large') =>
+  `/images/optimized/${size}/${getOptimizedImagePath(src)}.webp`;
+
 export default function NestedImageViewerPage({ params }: PageProps) {
   const { category, subcategory, imageId: subsubcategory, nestedImageId } = use(params);
-  const router = useRouter();
+  const router      = useRouter();
   const touchStartX = useRef<number | null>(null);
 
   if (!["photos", "drawings"].includes(category)) notFound();
@@ -52,9 +55,11 @@ export default function NestedImageViewerPage({ params }: PageProps) {
     notFound();
   }
 
-  const currentImage = subsubcategoryImages[currentIndex];
-  const hasPrevious  = currentIndex > 0;
-  const hasNext      = currentIndex < subsubcategoryImages.length - 1;
+  const currentImage  = subsubcategoryImages[currentIndex];
+  const previousImage = currentIndex > 0 ? subsubcategoryImages[currentIndex - 1] : null;
+  const nextImage     = currentIndex < subsubcategoryImages.length - 1 ? subsubcategoryImages[currentIndex + 1] : null;
+  const hasPrevious   = currentIndex > 0;
+  const hasNext       = currentIndex < subsubcategoryImages.length - 1;
 
   const basePath = `/gallery/${category}/${subcategory}/${subsubcategory}`;
 
@@ -91,6 +96,28 @@ export default function NestedImageViewerPage({ params }: PageProps) {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
+      {/* Preload adjacent images silently */}
+      {previousImage && (
+        <Image
+          src={getImageSrc(previousImage.src, 'medium')}
+          alt=""
+          fill
+          className="opacity-0 pointer-events-none"
+          aria-hidden
+          sizes="100vw"
+        />
+      )}
+      {nextImage && (
+        <Image
+          src={getImageSrc(nextImage.src, 'medium')}
+          alt=""
+          fill
+          className="opacity-0 pointer-events-none"
+          aria-hidden
+          sizes="100vw"
+        />
+      )}
+
       <div className="flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 shrink-0">
         <div className="text-white text-sm sm:text-base font-medium bg-black/50 px-3 py-1.5 rounded-full">
           {currentIndex + 1} / {subsubcategoryImages.length}
@@ -124,11 +151,21 @@ export default function NestedImageViewerPage({ params }: PageProps) {
           </button>
         )}
         <div className="relative w-full h-full">
+          {/* Mobile: medium size */}
           <Image
-            src={`/images/optimized/large/${getOptimizedImagePath(currentImage.src)}.webp`}
+            src={getImageSrc(currentImage.src, 'medium')}
             alt={currentImage.alt}
             fill
-            className="object-contain"
+            className="object-contain sm:hidden"
+            priority
+            sizes="100vw"
+          />
+          {/* Desktop: large size */}
+          <Image
+            src={getImageSrc(currentImage.src, 'large')}
+            alt={currentImage.alt}
+            fill
+            className="object-contain hidden sm:block"
             priority
             sizes="100vw"
           />

@@ -146,7 +146,7 @@ export default function RotatingHero({ intervalMs = 8000 }: { intervalMs?: numbe
 
       {/* Touch layer — touchAction:none prevents Android navigation gesture */}
       <div
-        className="absolute inset-0 z-40 sm:pointer-events-none"
+        className="absolute inset-0 z-40"
         style={{ touchAction: 'none' }}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}

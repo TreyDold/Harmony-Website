@@ -1,61 +1,41 @@
 // app/contact/page.tsx
 export default function ContactPage() {
   return (
-    <div className="min-h-screen pt-32 pb-16 px-8">
-      <div className="max-w-2xl mx-auto">
-        <h1 className="text-4xl sm:text-5xl font-serif text-gray-900 mb-8">
+    <div className="min-h-screen flex flex-col justify-center px-8 pt-24 pb-16">
+      <div className="max-w-xl mx-auto w-full">
+
+        <p
+          className="mb-16"
+          style={{
+            fontSize: 'clamp(0.6rem, 1.5vw, 0.75rem)',
+            letterSpacing: '0.15em',
+            textTransform: 'uppercase',
+            color: '#666666',
+          }}
+        >
           Contact
+        </p>
+
+        <h1
+          className="font-serif mb-16 leading-tight"
+          style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', color: '#1a1a1a', fontWeight: 'normal' }}
+        >
+          Let&apos;s work<br />together.
         </h1>
-        
-        <div className="prose prose-lg text-gray-600">
-          <p className="text-xl leading-relaxed mb-8">
-            Thank you for your interest in my work. I&apos;m always excited to connect 
-            with fellow artists, collectors, and anyone passionate about visual storytelling.
+
+        <div style={{ borderTop: '1px solid #e5e5e5', paddingTop: '2rem' }}>
+          <a
+            href="mailto:curlyharmony@gmail.com"
+            className="font-serif block mb-4 hover:opacity-50"
+            style={{ fontSize: 'clamp(1rem, 2.5vw, 1.5rem)', color: '#1a1a1a', textDecoration: 'none' }}
+          >
+            curlyharmony@gmail.com
+          </a>
+          <p style={{ fontSize: '0.8rem', letterSpacing: '0.05em', color: '#666666' }}>
+            Bay Area, California
           </p>
-          
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-lg font-medium text-gray-900 mb-2">
-                For inquiries about prints or originals:
-              </h3>
-              <p>
-                <a 
-                  href="mailto:curlyharmony@gmail.com" 
-                  className="text-amber-600 hover:text-amber-700 transition-colors"
-                >
-                  curlyharmony@gmail.com 
-                </a>
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-medium text-gray-900 mb-2">
-                Follow my work:
-              </h3>
-              <div className="flex space-x-4">
-                <a 
-                  href="#" 
-                  className="text-amber-600 hover:text-amber-700 transition-colors"
-                >
-                  Instagram
-                </a>
-                <a 
-                  href="#" 
-                  className="text-amber-600 hover:text-amber-700 transition-colors"
-                >
-                  Behance
-                </a>
-              </div>
-            </div>
-            
-            <div className="pt-8 border-t border-gray-100">
-              <p className="text-sm text-gray-500">
-                Currently based in San Francisco, California. 
-                Available for commissions and collaborations.
-              </p>
-            </div>
-          </div>
         </div>
+
       </div>
     </div>
   );

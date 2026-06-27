@@ -154,12 +154,6 @@ export default function RotatingHero({ intervalMs = 8000 }: { intervalMs?: numbe
       />
 
       {pool.length > 1 && (
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-50 text-white/60 text-xs tracking-widest">
-          {idx + 1} / {pool.length}
-        </div>
-      )}
-
-      {pool.length > 1 && (
         <>
           <button
             onClick={() => navigate('prev')}

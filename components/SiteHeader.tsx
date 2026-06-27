@@ -15,7 +15,7 @@ export default function SiteHeader() {
               href="/"
               className="font-serif shrink-0"
               style={{
-                fontSize: 'clamp(0.85rem, 4vw, 3.5rem)',
+                fontSize: 'clamp(0.6rem, 3vw, 3.5rem)',
                 fontWeight: 'normal',
                 color: 'white',
                 textShadow: '0 4px 12px rgba(0,0,0,0.9), 0 2px 4px rgba(0,0,0,0.8)',
@@ -23,7 +23,7 @@ export default function SiteHeader() {
                 textDecoration: 'none',
               }}
             >
-              HARMONY BAKER
+              HARMONY OLIVÍER BAKER
             </Link>
 
             <nav className="flex items-center gap-3 sm:gap-[clamp(16px,3vw,32px)] sm:ml-auto sm:pr-10">
@@ -74,7 +74,7 @@ export default function SiteHeader() {
               textDecoration: 'none',
             }}
           >
-            HARMONY BAKER
+            HARMONY OLIVÍER BAKER
           </Link>
 
           <nav className="flex items-center gap-3 sm:gap-[clamp(16px,3vw,32px)] sm:pr-10">

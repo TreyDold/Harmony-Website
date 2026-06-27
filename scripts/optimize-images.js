@@ -46,8 +46,9 @@ async function processImage(inputPath, relativePath, fileName) {
     
     const outputPath = path.join(outputSizeDir, `${fileNameWithoutExt}.webp`);
     
-    // Process with no cropping
+    // Process with no cropping (.rotate() applies EXIF orientation before stripping metadata)
     const image = sharp(inputPath)
+      .rotate()
       .resize(config.width, null, {
         fit: 'inside',
         withoutEnlargement: true

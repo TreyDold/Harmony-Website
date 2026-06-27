@@ -24,6 +24,10 @@ public/images/original/
 .DS_Store
 Thumbs.db
 
+# Large source files used locally for image processing only
+*.zip
+micros*/
+
 # testing
 /coverage
 

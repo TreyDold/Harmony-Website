@@ -5,7 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import imagesData from "@/data/images.json";
 
-type Img = { src: string; alt: string; category: string; subcategory: string };
+type Img = { src: string; alt: string; category: string; subcategory: string; landscape?: boolean | null };
 
 const getOptimizedImagePath = (oldSrc: string) => {
   const cleanPath = oldSrc
@@ -14,7 +14,7 @@ const getOptimizedImagePath = (oldSrc: string) => {
   return `/images/optimized/large/${cleanPath}.webp`;
 };
 
-const ALL_IMAGES = imagesData as Array<Img & { subsubcategory?: string }>;
+const ALL_IMAGES = (imagesData as Array<Img & { subsubcategory?: string }>).filter(img => img.landscape === true);
 
 export default function RotatingHero({ intervalMs = 8000 }: { intervalMs?: number }) {
   const [mounted, setMounted]         = useState(false);
@@ -140,9 +140,6 @@ export default function RotatingHero({ intervalMs = 8000 }: { intervalMs?: numbe
           sizes="100vw"
         />
       )}
-
-      <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/5 via-transparent to-black/5" />
 
       {/* Touch layer — touchAction:none prevents Android navigation gesture */}
       <div

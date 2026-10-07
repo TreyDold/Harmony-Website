@@ -117,11 +117,11 @@ export default function RotatingHero({ intervalMs = 8000 }: { intervalMs?: numbe
   const isRightSide = mouseX !== null && windowWidth > 0 && mouseX >= windowWidth / 2;
 
   if (!mounted || pool.length === 0) {
-    return <div className="relative h-screen w-full overflow-hidden bg-black" />;
+    return <div className="relative h-dvh w-full overflow-hidden bg-black" />;
   }
 
   return (
-    <div className="relative h-screen w-full overflow-hidden bg-black">
+    <div className="relative h-dvh w-full overflow-hidden bg-black">
       {slotA && (
         <Image
           src={slotA}

@@ -2,7 +2,7 @@ import RotatingHero from "@/components/RotatingHero";
 
 export default function Home() {
   return (
-    <div className="h-screen w-full relative overflow-hidden bg-black">
+    <div className="h-dvh w-full relative overflow-hidden bg-black">
       {/* Full-screen rotating hero */}
       <RotatingHero
         intervalMs={8000}  // Slower transitions like James Jean
